@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_git = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btn_git
+            // 
+            this.btn_git.Location = new System.Drawing.Point(249, 99);
+            this.btn_git.Name = "btn_git";
+            this.btn_git.Size = new System.Drawing.Size(293, 207);
+            this.btn_git.TabIndex = 0;
+            this.btn_git.Text = "Boton git";
+            this.btn_git.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_git);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_git;
     }
 }
 

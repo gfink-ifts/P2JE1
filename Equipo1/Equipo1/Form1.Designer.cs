@@ -39,6 +39,7 @@
             this.btn_git.TabIndex = 0;
             this.btn_git.Text = "Boton git";
             this.btn_git.UseVisualStyleBackColor = true;
+            this.btn_git.Click += new System.EventHandler(this.btn_git_Click);
             // 
             // Form1
             // 

@@ -32,9 +32,9 @@
             this.btn_Nueva_Venta = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbo_Clientes = new System.Windows.Forms.ComboBox();
+            this.cbo_PAIS = new System.Windows.Forms.ComboBox();
+            this.cbo_VENDEDOR = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,8 +45,8 @@
             this.gru_consulta_ventas = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Ver_Ventas = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -88,29 +88,29 @@
             this.lbl_Fecha.TabIndex = 3;
             this.lbl_Fecha.Text = "label1";
             // 
-            // comboBox1
+            // cbo_Clientes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(83, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbo_Clientes.FormattingEnabled = true;
+            this.cbo_Clientes.Location = new System.Drawing.Point(83, 6);
+            this.cbo_Clientes.Name = "cbo_Clientes";
+            this.cbo_Clientes.Size = new System.Drawing.Size(123, 21);
+            this.cbo_Clientes.TabIndex = 4;
             // 
-            // comboBox2
+            // cbo_PAIS
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(293, 25);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(123, 21);
-            this.comboBox2.TabIndex = 5;
+            this.cbo_PAIS.FormattingEnabled = true;
+            this.cbo_PAIS.Location = new System.Drawing.Point(293, 25);
+            this.cbo_PAIS.Name = "cbo_PAIS";
+            this.cbo_PAIS.Size = new System.Drawing.Size(123, 21);
+            this.cbo_PAIS.TabIndex = 5;
             // 
-            // comboBox3
+            // cbo_VENDEDOR
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(152, 25);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(123, 21);
-            this.comboBox3.TabIndex = 6;
+            this.cbo_VENDEDOR.FormattingEnabled = true;
+            this.cbo_VENDEDOR.Location = new System.Drawing.Point(152, 25);
+            this.cbo_VENDEDOR.Name = "cbo_VENDEDOR";
+            this.cbo_VENDEDOR.Size = new System.Drawing.Size(123, 21);
+            this.cbo_VENDEDOR.TabIndex = 6;
             // 
             // label1
             // 
@@ -145,8 +145,8 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cbo_VENDEDOR);
+            this.groupBox1.Controls.Add(this.cbo_PAIS);
             this.groupBox1.Controls.Add(this.btn_Nueva_Venta);
             this.groupBox1.Location = new System.Drawing.Point(127, 53);
             this.groupBox1.Name = "groupBox1";
@@ -181,9 +181,9 @@
             // 
             // gru_consulta_ventas
             // 
+            this.gru_consulta_ventas.Controls.Add(this.label5);
+            this.gru_consulta_ventas.Controls.Add(this.comboBox4);
             this.gru_consulta_ventas.Controls.Add(this.btn_Ver_Ventas);
-            this.gru_consulta_ventas.Controls.Add(this.button3);
-            this.gru_consulta_ventas.Controls.Add(this.button4);
             this.gru_consulta_ventas.Controls.Add(this.dataGridView2);
             this.gru_consulta_ventas.Location = new System.Drawing.Point(0, 216);
             this.gru_consulta_ventas.Name = "gru_consulta_ventas";
@@ -210,23 +210,22 @@
             this.btn_Ver_Ventas.Text = "TOTAL VENTAS";
             this.btn_Ver_Ventas.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // comboBox4
             // 
-            this.button3.Location = new System.Drawing.Point(330, 22);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 21);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(521, 19);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(134, 21);
+            this.comboBox4.TabIndex = 15;
             // 
-            // button4
+            // label5
             // 
-            this.button4.Location = new System.Drawing.Point(653, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 21);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(433, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "ORDENAR";
             // 
             // VENTAS
             // 
@@ -237,7 +236,7 @@
             this.Controls.Add(this.gru_consulta_ventas);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbo_Clientes);
             this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.dataGridView1);
@@ -249,6 +248,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.gru_consulta_ventas.ResumeLayout(false);
+            this.gru_consulta_ventas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,9 +260,9 @@
         private System.Windows.Forms.Button btn_Nueva_Venta;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Label lbl_Fecha;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbo_Clientes;
+        private System.Windows.Forms.ComboBox cbo_PAIS;
+        private System.Windows.Forms.ComboBox cbo_VENDEDOR;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -272,8 +272,8 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.GroupBox gru_consulta_ventas;
         private System.Windows.Forms.Button btn_Ver_Ventas;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

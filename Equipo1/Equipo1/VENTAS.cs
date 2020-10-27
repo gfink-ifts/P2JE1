@@ -25,6 +25,40 @@ namespace Equipo1
         {
             cn = new SqlConnection(cadenaConex);
             lbl_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            cargarcomboCLIENTE();
+            cargarcomboVENDEDOR();
+        }
+        void cargarcomboCLIENTE()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+
+            string consulta = "SELECT idCliente, nombre, apellido FROM clientes";
+            cn.Open();
+            da = new SqlDataAdapter(consulta, cn);
+            da.Fill(dt);
+            cn.Close();
+            cbo_Clientes.DataSource = dt;
+            dt.Columns.Add("NOMBRECOMPLETO", typeof(string), "Nombre + '  ' + Apellido");
+            cbo_Clientes.ValueMember = "idCliente";
+            cbo_Clientes.DisplayMember = "NOMBRECOMPLETO";
+                            
+        }
+        void cargarcomboVENDEDOR()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+
+            string consulta = "SELECT idVendedor, nombre, apellido FROM Vendedores";
+            cn.Open();
+            da = new SqlDataAdapter(consulta, cn);
+            da.Fill(dt);
+            cn.Close();
+            cbo_VENDEDOR.DataSource = dt;
+            dt.Columns.Add("NOMBRECOMPLETO", typeof(string), "Nombre + '  ' + Apellido");
+            cbo_VENDEDOR.ValueMember = "idVendedor";
+            cbo_VENDEDOR.DisplayMember = "NOMBRECOMPLETO";
+
         }
     }
 }

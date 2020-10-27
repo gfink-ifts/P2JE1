@@ -24,6 +24,7 @@ namespace Equipo1
         private void VENTAS_Load(object sender, EventArgs e)
         {
             cn = new SqlConnection(cadenaConex);
+            lbl_Fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

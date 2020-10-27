@@ -31,6 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_precioCiudad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_modificaAgrega = new System.Windows.Forms.Button();
             this.chk_nuevaCiudad = new System.Windows.Forms.CheckBox();
             this.cbo_ciudad = new System.Windows.Forms.ComboBox();
@@ -44,8 +46,6 @@
             this.chk_modificar = new System.Windows.Forms.CheckBox();
             this.cbo_Pais = new System.Windows.Forms.ComboBox();
             this.btn_salir = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_precioCiudad = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -59,7 +59,7 @@
             this.groupBox1.Size = new System.Drawing.Size(493, 354);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Productos :";
+            this.groupBox1.Text = "Destinos :";
             // 
             // dataGridView1
             // 
@@ -91,6 +91,22 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edición de Campos :";
+            // 
+            // txt_precioCiudad
+            // 
+            this.txt_precioCiudad.Location = new System.Drawing.Point(182, 251);
+            this.txt_precioCiudad.Name = "txt_precioCiudad";
+            this.txt_precioCiudad.Size = new System.Drawing.Size(121, 20);
+            this.txt_precioCiudad.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(133, 254);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Precio :";
             // 
             // btn_modificaAgrega
             // 
@@ -206,22 +222,6 @@
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(133, 254);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Precio :";
-            // 
-            // txt_precioCiudad
-            // 
-            this.txt_precioCiudad.Location = new System.Drawing.Point(182, 251);
-            this.txt_precioCiudad.Name = "txt_precioCiudad";
-            this.txt_precioCiudad.Size = new System.Drawing.Size(121, 20);
-            this.txt_precioCiudad.TabIndex = 14;
             // 
             // PRODUCTOS
             // 

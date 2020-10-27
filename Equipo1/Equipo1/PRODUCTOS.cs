@@ -53,11 +53,27 @@ namespace Equipo1
             int pais = Convert.ToInt16(cbo_Pais.SelectedValue);
             cbo_ciudad.Enabled = true;
             CargaCombos(false, true, pais);
+            chk_nuevaCiudad.Checked = false;
         }
 
         private void chk_nuevaCiudad_CheckedChanged(object sender, EventArgs e)
         {
+            if (chk_nuevaCiudad.Checked)
+            {
+                txt_ciudadNew.Enabled = true;
+                txt_precioCiudad.Enabled = true;
+                //cbo_ciudad.Text = "";
+                cbo_ciudad.Enabled = false;
 
+            }
+            else
+            {
+                cbo_ciudad.Enabled = true;
+
+                txt_ciudadNew.Enabled = false;
+                txt_precioCiudad.Enabled = false;
+
+            }
         }
 
 

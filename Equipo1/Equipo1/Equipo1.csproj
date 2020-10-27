@@ -78,8 +78,17 @@
     <Compile Include="VENTAS.Designer.cs">
       <DependentUpon>VENTAS.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CLIENTE.resx">
+      <DependentUpon>CLIENTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONSULTAS.resx">
+      <DependentUpon>CONSULTAS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PORTADA.resx">
       <DependentUpon>PORTADA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRODUCTOS.resx">
+      <DependentUpon>PRODUCTOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VENTAS.resx">
+      <DependentUpon>VENTAS.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

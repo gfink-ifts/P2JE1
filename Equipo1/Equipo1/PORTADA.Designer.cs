@@ -1,6 +1,6 @@
 ﻿namespace Equipo1
 {
-    partial class Form1
+    partial class PORTADA
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -40,11 +40,11 @@
             // 
             this.btn_Agre_o_Mod_Cliente.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_Agre_o_Mod_Cliente.Location = new System.Drawing.Point(35, 35);
-            this.btn_Agre_o_Mod_Cliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Agre_o_Mod_Cliente.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Agre_o_Mod_Cliente.Name = "btn_Agre_o_Mod_Cliente";
             this.btn_Agre_o_Mod_Cliente.Size = new System.Drawing.Size(139, 45);
             this.btn_Agre_o_Mod_Cliente.TabIndex = 0;
-            this.btn_Agre_o_Mod_Cliente.Text = "AGREGAR O MODIFICAR CLIENTE";
+            this.btn_Agre_o_Mod_Cliente.Text = "CLIENTE";
             this.btn_Agre_o_Mod_Cliente.UseVisualStyleBackColor = true;
             this.btn_Agre_o_Mod_Cliente.Click += new System.EventHandler(this.btn_git_Click);
             // 
@@ -56,8 +56,9 @@
             this.btn_Agr_o_Mod_Produ.Name = "btn_Agr_o_Mod_Produ";
             this.btn_Agr_o_Mod_Produ.Size = new System.Drawing.Size(139, 45);
             this.btn_Agr_o_Mod_Produ.TabIndex = 1;
-            this.btn_Agr_o_Mod_Produ.Text = "AGREGAR O MODIFICAR PRODUCTO";
+            this.btn_Agr_o_Mod_Produ.Text = "PRODUCTO";
             this.btn_Agr_o_Mod_Produ.UseVisualStyleBackColor = true;
+            this.btn_Agr_o_Mod_Produ.Click += new System.EventHandler(this.btn_Agr_o_Mod_Produ_Click);
             // 
             // btn_Agre_o_Modi_Ventas
             // 
@@ -67,8 +68,9 @@
             this.btn_Agre_o_Modi_Ventas.Name = "btn_Agre_o_Modi_Ventas";
             this.btn_Agre_o_Modi_Ventas.Size = new System.Drawing.Size(139, 45);
             this.btn_Agre_o_Modi_Ventas.TabIndex = 2;
-            this.btn_Agre_o_Modi_Ventas.Text = "AGREGAR VENTAS O MODIFICARLAS";
+            this.btn_Agre_o_Modi_Ventas.Text = "VENTAS";
             this.btn_Agre_o_Modi_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Agre_o_Modi_Ventas.Click += new System.EventHandler(this.btn_Agre_o_Modi_Ventas_Click);
             // 
             // btn_Consultas
             // 
@@ -80,6 +82,7 @@
             this.btn_Consultas.TabIndex = 3;
             this.btn_Consultas.Text = "CONSULTAS";
             this.btn_Consultas.UseVisualStyleBackColor = true;
+            this.btn_Consultas.Click += new System.EventHandler(this.btn_Consultas_Click);
             // 
             // gru_Viajes
             // 
@@ -94,14 +97,14 @@
             this.gru_Viajes.TabStop = false;
             this.gru_Viajes.Text = "                                                           AGENCIA DE VIAJES";
             // 
-            // Form1
+            // PORTADA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.gru_Viajes);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "PORTADA";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gru_Viajes.ResumeLayout(false);

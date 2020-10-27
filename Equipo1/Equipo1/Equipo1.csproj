@@ -46,16 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CLIENTE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CLIENTE.Designer.cs">
+      <DependentUpon>CLIENTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONSULTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONSULTAS.Designer.cs">
+      <DependentUpon>CONSULTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PORTADA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PORTADA.Designer.cs">
+      <DependentUpon>PORTADA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUCTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRODUCTOS.Designer.cs">
+      <DependentUpon>PRODUCTOS.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="VENTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS.Designer.cs">
+      <DependentUpon>VENTAS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PORTADA.resx">
+      <DependentUpon>PORTADA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

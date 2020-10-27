@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Equipo1
 {
-    public partial class Form1 : Form
+    public partial class PRODUCTOS : Form
     {
-        public Form1(  )
+        public PRODUCTOS()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_git_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -33,6 +33,7 @@
             this.btn_Agre_o_Modi_Ventas = new System.Windows.Forms.Button();
             this.btn_Consultas = new System.Windows.Forms.Button();
             this.gru_Viajes = new System.Windows.Forms.GroupBox();
+            this.btn_Salir = new System.Windows.Forms.Button();
             this.gru_Viajes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,11 +98,23 @@
             this.gru_Viajes.TabStop = false;
             this.gru_Viajes.Text = "                                                           AGENCIA DE VIAJES";
             // 
+            // btn_Salir
+            // 
+            this.btn_Salir.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btn_Salir.Location = new System.Drawing.Point(192, 286);
+            this.btn_Salir.Name = "btn_Salir";
+            this.btn_Salir.Size = new System.Drawing.Size(149, 31);
+            this.btn_Salir.TabIndex = 5;
+            this.btn_Salir.Text = "CERRAR APLICACIÓN";
+            this.btn_Salir.UseVisualStyleBackColor = true;
+            this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
             // PORTADA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(533, 329);
+            this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.gru_Viajes);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PORTADA";
@@ -119,6 +132,7 @@
         private System.Windows.Forms.Button btn_Agre_o_Modi_Ventas;
         private System.Windows.Forms.Button btn_Consultas;
         private System.Windows.Forms.GroupBox gru_Viajes;
+        private System.Windows.Forms.Button btn_Salir;
     }
 }
 

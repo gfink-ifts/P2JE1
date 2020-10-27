@@ -54,6 +54,11 @@ namespace Equipo1
             formconsultas.cadenaConex = dBase;
             formconsultas.Show();
         }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
  

@@ -146,6 +146,7 @@ namespace Equipo1
             {
                 MessageBox.Show("Faltan campos");
             }
+            
         }
         Boolean checkVacios()
         {
@@ -187,5 +188,64 @@ namespace Equipo1
             }
             return respuesta;
         }
+
+        private void cbo_PAIS_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+          
+                string pais = cbo_PAIS.SelectedValue.ToString();
+                SqlDataAdapter da;
+                DataTable dt = new DataTable();
+                cn.Open();
+                string consulta = "select c.Ciudad "+
+                                  "from Paises as p, Ciudades as c "+
+                                  "where p.idPais = c.idPais and p.idPais = @idpais";
+                da = new SqlDataAdapter(consulta, cn);
+                da.SelectCommand.Parameters.AddWithValue("@idpais", pais);
+                da.Fill(dt);
+                cn.Close();
+                if (dt.Rows.Count > 0)
+                {
+                    checkBox1.Text = dt.Rows[0][0].ToString();
+                    checkBox2.Text = dt.Rows[1][0].ToString();
+                    checkBox3.Text = dt.Rows[2][0].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró información");
+                }
+               
+    }
+
+        private void btn_carga_Click(object sender, EventArgs e)
+        {
+            txt_cant_PERS.Text="";
+            if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
+            {
+                txt_cant_PERS.Text = "3";
+
+            }
+            else
+            {
+
+                if ((checkBox1.Checked && checkBox2.Checked) || (checkBox1.Checked && checkBox3.Checked) || (checkBox2.Checked && checkBox3.Checked))
+                {
+                    txt_cant_PERS.Text = "2";
+
+                   
+                }
+                else
+                {
+                    if ((checkBox1.Checked) || (checkBox2.Checked) || (checkBox3.Checked))
+                    {
+                        txt_cant_PERS.Text = "1";
+                    }
+                    else
+                    {
+                        MessageBox.Show("DEBE ELEGIR UNA CIUDAD");
+                    }
+                }
+            }
+        }
     }
 }
+

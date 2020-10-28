@@ -37,6 +37,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupVentas = new System.Windows.Forms.GroupBox();
+            this.groupDESTINO = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_cant_PERS = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -45,17 +49,14 @@
             this.cbo_orden = new System.Windows.Forms.ComboBox();
             this.btn_Ver_Ventas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.groupDESTINO = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
+            this.btn_carga = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupVentas.SuspendLayout();
+            this.groupDESTINO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.gru_consulta_ventas.SuspendLayout();
-            this.groupDESTINO.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -91,6 +92,7 @@
             this.cbo_PAIS.Name = "cbo_PAIS";
             this.cbo_PAIS.Size = new System.Drawing.Size(123, 21);
             this.cbo_PAIS.TabIndex = 5;
+            this.cbo_PAIS.SelectionChangeCommitted += new System.EventHandler(this.cbo_PAIS_SelectionChangeCommitted);
             // 
             // cbo_VENDEDOR
             // 
@@ -141,6 +143,51 @@
             this.groupVentas.TabIndex = 10;
             this.groupVentas.TabStop = false;
             this.groupVentas.Text = "VENTAS";
+            // 
+            // groupDESTINO
+            // 
+            this.groupDESTINO.Controls.Add(this.btn_carga);
+            this.groupDESTINO.Controls.Add(this.checkBox3);
+            this.groupDESTINO.Controls.Add(this.checkBox2);
+            this.groupDESTINO.Controls.Add(this.checkBox1);
+            this.groupDESTINO.Controls.Add(this.label2);
+            this.groupDESTINO.Controls.Add(this.cbo_PAIS);
+            this.groupDESTINO.Location = new System.Drawing.Point(281, 9);
+            this.groupDESTINO.Name = "groupDESTINO";
+            this.groupDESTINO.Size = new System.Drawing.Size(334, 84);
+            this.groupDESTINO.TabIndex = 17;
+            this.groupDESTINO.TabStop = false;
+            this.groupDESTINO.Text = "DESTINO";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(246, 51);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 16;
+            this.checkBox3.Text = "checkBox3";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(129, 51);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(80, 17);
+            this.checkBox2.TabIndex = 15;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 51);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 14;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txt_cant_PERS
             // 
@@ -214,50 +261,6 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 51);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(129, 51);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(246, 51);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 16;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // groupDESTINO
-            // 
-            this.groupDESTINO.Controls.Add(this.checkBox3);
-            this.groupDESTINO.Controls.Add(this.checkBox2);
-            this.groupDESTINO.Controls.Add(this.checkBox1);
-            this.groupDESTINO.Controls.Add(this.label2);
-            this.groupDESTINO.Controls.Add(this.cbo_PAIS);
-            this.groupDESTINO.Location = new System.Drawing.Point(281, 9);
-            this.groupDESTINO.Name = "groupDESTINO";
-            this.groupDESTINO.Size = new System.Drawing.Size(334, 84);
-            this.groupDESTINO.TabIndex = 17;
-            this.groupDESTINO.TabStop = false;
-            this.groupDESTINO.Text = "DESTINO";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(752, 6);
@@ -272,6 +275,16 @@
             this.txt_fechaalta.Name = "txt_fechaalta";
             this.txt_fechaalta.Size = new System.Drawing.Size(84, 20);
             this.txt_fechaalta.TabIndex = 15;
+            // 
+            // btn_carga
+            // 
+            this.btn_carga.Location = new System.Drawing.Point(263, 9);
+            this.btn_carga.Name = "btn_carga";
+            this.btn_carga.Size = new System.Drawing.Size(71, 24);
+            this.btn_carga.TabIndex = 17;
+            this.btn_carga.Text = "CARGA";
+            this.btn_carga.UseVisualStyleBackColor = true;
+            this.btn_carga.Click += new System.EventHandler(this.btn_carga_Click);
             // 
             // VENTAS
             // 
@@ -292,11 +305,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupVentas.ResumeLayout(false);
             this.groupVentas.PerformLayout();
+            this.groupDESTINO.ResumeLayout(false);
+            this.groupDESTINO.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.gru_consulta_ventas.ResumeLayout(false);
             this.gru_consulta_ventas.PerformLayout();
-            this.groupDESTINO.ResumeLayout(false);
-            this.groupDESTINO.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +340,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txt_fechaalta;
+        private System.Windows.Forms.Button btn_carga;
     }
 }

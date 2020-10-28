@@ -146,7 +146,34 @@ namespace Equipo1
             {
                 MessageBox.Show("Faltan campos");
             }
+            string idventa = "";
+            string cantidad_ciudades="";
+            SqlDataAdapter da,daCantidad;
+            DataTable dt = new DataTable();
+            DataTable dtCantidad = new DataTable();
+            cantidad_ciudades = txt_Cantidad_Ciudades.Text;
             
+            string consulta = "select v.Fecha_de_Venta,cl.Nombre,cl.Apellido,v.Cantidad_Pasajeros, ven.Nombre,ven.Apellido,p.Precio +(@canticiudades * c.Precio) as total " +
+                              "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p, Ciudades as c " +
+                              "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and p.idPais = c.idPais  and v.idVentas = @idventa ";
+
+            string consultaCantidad = "select count (idVentas)  as cantidad from Ventas";
+
+            daCantidad = new SqlDataAdapter(consultaCantidad, cn);
+            da = new SqlDataAdapter(consulta, cn);
+            cn.Open();
+            
+            daCantidad.Fill(dtCantidad);
+            
+            idventa = dtCantidad.Rows[0][0].ToString();
+                                           
+            da.SelectCommand.Parameters.AddWithValue("@idventa", idventa);
+            da.SelectCommand.Parameters.AddWithValue("@canticiudades", cantidad_ciudades);
+
+            da.Fill(dt);
+            dataGrid_Venta_Nueva.DataSource = dt;
+            cn.Close();
+
         }
         Boolean checkVacios()
         {
@@ -221,7 +248,7 @@ namespace Equipo1
             txt_cant_PERS.Text="";
             if (checkBox1.Checked && checkBox2.Checked && checkBox3.Checked)
             {
-                txt_cant_PERS.Text = "3";
+                txt_Cantidad_Ciudades.Text = "3";
 
             }
             else
@@ -229,7 +256,7 @@ namespace Equipo1
 
                 if ((checkBox1.Checked && checkBox2.Checked) || (checkBox1.Checked && checkBox3.Checked) || (checkBox2.Checked && checkBox3.Checked))
                 {
-                    txt_cant_PERS.Text = "2";
+                    txt_Cantidad_Ciudades.Text = "2";
 
                    
                 }
@@ -237,7 +264,7 @@ namespace Equipo1
                 {
                     if ((checkBox1.Checked) || (checkBox2.Checked) || (checkBox3.Checked))
                     {
-                        txt_cant_PERS.Text = "1";
+                        txt_Cantidad_Ciudades.Text = "1";
                     }
                     else
                     {

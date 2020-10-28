@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Venta_Nueva = new System.Windows.Forms.DataGridView();
             this.btn_Nueva_Venta = new System.Windows.Forms.Button();
             this.cbo_Clientes = new System.Windows.Forms.ComboBox();
             this.cbo_PAIS = new System.Windows.Forms.ComboBox();
@@ -52,20 +52,22 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
             this.btn_carga = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txt_Cantidad_Ciudades = new System.Windows.Forms.TextBox();
+            this.txt_cant_ciudades = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).BeginInit();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.gru_consulta_ventas.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGrid_Venta_Nueva
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 138);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(759, 67);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGrid_Venta_Nueva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Venta_Nueva.Location = new System.Drawing.Point(12, 138);
+            this.dataGrid_Venta_Nueva.Name = "dataGrid_Venta_Nueva";
+            this.dataGrid_Venta_Nueva.Size = new System.Drawing.Size(759, 67);
+            this.dataGrid_Venta_Nueva.TabIndex = 0;
             // 
             // btn_Nueva_Venta
             // 
@@ -146,6 +148,8 @@
             // 
             // groupDESTINO
             // 
+            this.groupDESTINO.Controls.Add(this.txt_cant_ciudades);
+            this.groupDESTINO.Controls.Add(this.txt_Cantidad_Ciudades);
             this.groupDESTINO.Controls.Add(this.btn_carga);
             this.groupDESTINO.Controls.Add(this.checkBox3);
             this.groupDESTINO.Controls.Add(this.checkBox2);
@@ -162,7 +166,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(246, 51);
+            this.checkBox3.Location = new System.Drawing.Point(248, 61);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 16;
@@ -172,7 +176,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(129, 51);
+            this.checkBox2.Location = new System.Drawing.Point(135, 61);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 15;
@@ -182,7 +186,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(16, 51);
+            this.checkBox1.Location = new System.Drawing.Point(17, 61);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 14;
@@ -286,6 +290,22 @@
             this.btn_carga.UseVisualStyleBackColor = true;
             this.btn_carga.Click += new System.EventHandler(this.btn_carga_Click);
             // 
+            // txt_Cantidad_Ciudades
+            // 
+            this.txt_Cantidad_Ciudades.Location = new System.Drawing.Point(302, 35);
+            this.txt_Cantidad_Ciudades.Name = "txt_Cantidad_Ciudades";
+            this.txt_Cantidad_Ciudades.Size = new System.Drawing.Size(26, 20);
+            this.txt_Cantidad_Ciudades.TabIndex = 18;
+            // 
+            // txt_cant_ciudades
+            // 
+            this.txt_cant_ciudades.AutoSize = true;
+            this.txt_cant_ciudades.Location = new System.Drawing.Point(234, 39);
+            this.txt_cant_ciudades.Name = "txt_cant_ciudades";
+            this.txt_cant_ciudades.Size = new System.Drawing.Size(65, 13);
+            this.txt_cant_ciudades.TabIndex = 19;
+            this.txt_cant_ciudades.Text = "CANTIDAD:";
+            // 
             // VENTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,11 +318,11 @@
             this.Controls.Add(this.groupVentas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbo_Clientes);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGrid_Venta_Nueva);
             this.Name = "VENTAS";
             this.Text = "VENTAS";
             this.Load += new System.EventHandler(this.VENTAS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).EndInit();
             this.groupVentas.ResumeLayout(false);
             this.groupVentas.PerformLayout();
             this.groupDESTINO.ResumeLayout(false);
@@ -317,7 +337,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGrid_Venta_Nueva;
         private System.Windows.Forms.Button btn_Nueva_Venta;
         private System.Windows.Forms.ComboBox cbo_Clientes;
         private System.Windows.Forms.ComboBox cbo_PAIS;
@@ -341,5 +361,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txt_fechaalta;
         private System.Windows.Forms.Button btn_carga;
+        private System.Windows.Forms.Label txt_cant_ciudades;
+        private System.Windows.Forms.TextBox txt_Cantidad_Ciudades;
     }
 }

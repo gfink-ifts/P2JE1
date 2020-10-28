@@ -38,12 +38,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupVentas = new System.Windows.Forms.GroupBox();
             this.groupDESTINO = new System.Windows.Forms.GroupBox();
+            this.txt_cant_ciudades = new System.Windows.Forms.Label();
+            this.txt_Cantidad_Ciudades = new System.Windows.Forms.TextBox();
+            this.btn_carga = new System.Windows.Forms.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_cant_PERS = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_ventasGeneral = new System.Windows.Forms.DataGridView();
             this.gru_consulta_ventas = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbo_orden = new System.Windows.Forms.ComboBox();
@@ -51,13 +54,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
-            this.btn_carga = new System.Windows.Forms.Button();
-            this.txt_Cantidad_Ciudades = new System.Windows.Forms.TextBox();
-            this.txt_cant_ciudades = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).BeginInit();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ventasGeneral)).BeginInit();
             this.gru_consulta_ventas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,6 +164,32 @@
             this.groupDESTINO.TabStop = false;
             this.groupDESTINO.Text = "DESTINO";
             // 
+            // txt_cant_ciudades
+            // 
+            this.txt_cant_ciudades.AutoSize = true;
+            this.txt_cant_ciudades.Location = new System.Drawing.Point(234, 39);
+            this.txt_cant_ciudades.Name = "txt_cant_ciudades";
+            this.txt_cant_ciudades.Size = new System.Drawing.Size(65, 13);
+            this.txt_cant_ciudades.TabIndex = 19;
+            this.txt_cant_ciudades.Text = "CANTIDAD:";
+            // 
+            // txt_Cantidad_Ciudades
+            // 
+            this.txt_Cantidad_Ciudades.Location = new System.Drawing.Point(302, 35);
+            this.txt_Cantidad_Ciudades.Name = "txt_Cantidad_Ciudades";
+            this.txt_Cantidad_Ciudades.Size = new System.Drawing.Size(26, 20);
+            this.txt_Cantidad_Ciudades.TabIndex = 18;
+            // 
+            // btn_carga
+            // 
+            this.btn_carga.Location = new System.Drawing.Point(263, 9);
+            this.btn_carga.Name = "btn_carga";
+            this.btn_carga.Size = new System.Drawing.Size(71, 24);
+            this.btn_carga.TabIndex = 17;
+            this.btn_carga.Text = "CARGA";
+            this.btn_carga.UseVisualStyleBackColor = true;
+            this.btn_carga.Click += new System.EventHandler(this.btn_carga_Click);
+            // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
@@ -209,20 +236,20 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "CANTIDAD";
             // 
-            // dataGridView2
+            // dataGrid_ventasGeneral
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 49);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(759, 145);
-            this.dataGridView2.TabIndex = 11;
+            this.dataGrid_ventasGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_ventasGeneral.Location = new System.Drawing.Point(12, 49);
+            this.dataGrid_ventasGeneral.Name = "dataGrid_ventasGeneral";
+            this.dataGrid_ventasGeneral.Size = new System.Drawing.Size(759, 145);
+            this.dataGrid_ventasGeneral.TabIndex = 11;
             // 
             // gru_consulta_ventas
             // 
             this.gru_consulta_ventas.Controls.Add(this.label5);
             this.gru_consulta_ventas.Controls.Add(this.cbo_orden);
             this.gru_consulta_ventas.Controls.Add(this.btn_Ver_Ventas);
-            this.gru_consulta_ventas.Controls.Add(this.dataGridView2);
+            this.gru_consulta_ventas.Controls.Add(this.dataGrid_ventasGeneral);
             this.gru_consulta_ventas.Location = new System.Drawing.Point(0, 216);
             this.gru_consulta_ventas.Name = "gru_consulta_ventas";
             this.gru_consulta_ventas.Size = new System.Drawing.Size(798, 208);
@@ -246,6 +273,7 @@
             this.cbo_orden.Name = "cbo_orden";
             this.cbo_orden.Size = new System.Drawing.Size(134, 21);
             this.cbo_orden.TabIndex = 15;
+            this.cbo_orden.SelectionChangeCommitted += new System.EventHandler(this.cbo_orden_SelectionChangeCommitted);
             // 
             // btn_Ver_Ventas
             // 
@@ -255,6 +283,7 @@
             this.btn_Ver_Ventas.TabIndex = 14;
             this.btn_Ver_Ventas.Text = "TOTAL VENTAS";
             this.btn_Ver_Ventas.UseVisualStyleBackColor = true;
+            this.btn_Ver_Ventas.Click += new System.EventHandler(this.btn_Ver_Ventas_Click);
             // 
             // button1
             // 
@@ -262,7 +291,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 21);
             this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
+            this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
@@ -280,37 +309,21 @@
             this.txt_fechaalta.Size = new System.Drawing.Size(84, 20);
             this.txt_fechaalta.TabIndex = 15;
             // 
-            // btn_carga
+            // label6
             // 
-            this.btn_carga.Location = new System.Drawing.Point(263, 9);
-            this.btn_carga.Name = "btn_carga";
-            this.btn_carga.Size = new System.Drawing.Size(71, 24);
-            this.btn_carga.TabIndex = 17;
-            this.btn_carga.Text = "CARGA";
-            this.btn_carga.UseVisualStyleBackColor = true;
-            this.btn_carga.Click += new System.EventHandler(this.btn_carga_Click);
-            // 
-            // txt_Cantidad_Ciudades
-            // 
-            this.txt_Cantidad_Ciudades.Location = new System.Drawing.Point(302, 35);
-            this.txt_Cantidad_Ciudades.Name = "txt_Cantidad_Ciudades";
-            this.txt_Cantidad_Ciudades.Size = new System.Drawing.Size(26, 20);
-            this.txt_Cantidad_Ciudades.TabIndex = 18;
-            // 
-            // txt_cant_ciudades
-            // 
-            this.txt_cant_ciudades.AutoSize = true;
-            this.txt_cant_ciudades.Location = new System.Drawing.Point(234, 39);
-            this.txt_cant_ciudades.Name = "txt_cant_ciudades";
-            this.txt_cant_ciudades.Size = new System.Drawing.Size(65, 13);
-            this.txt_cant_ciudades.TabIndex = 19;
-            this.txt_cant_ciudades.Text = "CANTIDAD:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(163, 438);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "label6";
             // 
             // VENTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_fechaalta);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -327,7 +340,7 @@
             this.groupVentas.PerformLayout();
             this.groupDESTINO.ResumeLayout(false);
             this.groupDESTINO.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ventasGeneral)).EndInit();
             this.gru_consulta_ventas.ResumeLayout(false);
             this.gru_consulta_ventas.PerformLayout();
             this.ResumeLayout(false);
@@ -348,7 +361,7 @@
         private System.Windows.Forms.GroupBox groupVentas;
         private System.Windows.Forms.TextBox txt_cant_PERS;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGrid_ventasGeneral;
         private System.Windows.Forms.GroupBox gru_consulta_ventas;
         private System.Windows.Forms.Button btn_Ver_Ventas;
         private System.Windows.Forms.Button button1;
@@ -363,5 +376,6 @@
         private System.Windows.Forms.Button btn_carga;
         private System.Windows.Forms.Label txt_cant_ciudades;
         private System.Windows.Forms.TextBox txt_Cantidad_Ciudades;
+        private System.Windows.Forms.Label label6;
     }
 }

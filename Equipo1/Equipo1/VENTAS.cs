@@ -273,6 +273,25 @@ namespace Equipo1
                 }
             }
         }
+
+        private void cbo_orden_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_Ver_Ventas_Click(object sender, EventArgs e)
+        {                     
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string query = "select v.idVentas,p.Pais, v.Fecha_de_Venta,cl.Nombre,cl.Apellido,v.Cantidad_Pasajeros, ven.Nombre,ven.Apellido,p.Precio+c.Precio as total " +
+                               "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p, Ciudades as c " +
+                               "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and p.idPais = c.idPais ";
+            cn.Open();
+            da = new SqlDataAdapter(query, cn);
+            da.Fill(dt);
+            cn.Close();
+            dataGrid_ventasGeneral.DataSource = dt;
+        }
     }
 }
 

@@ -94,20 +94,11 @@ namespace Equipo1
         private void btn_Nueva_Venta_Click(object sender, EventArgs e)
         {
             if (checkVacios())
-            {
-
-                // Variables con las instrucciones para la base de datos:
+            {              
                 string fecha;               
                 string instruccion = "INSERT INTO Ventas(Fecha_de_Venta, idVendedor,idPais,idCliente,Cantidad_Pasajeros) " +
                                         "VALUES (@fecha, @idvendedor, @idpais,@idcliente,@Cantidad_Pasajeros)";
-                
-                // Mensajes de confirmación:
-                
-                
                 string mensajeNuevo = "Venta nueva ingresada Correctamente";
-
-
-                // Campos ingresados por el usuario para insertar a la instrucción de la dB
                 fecha = txt_fechaalta.Text;
                 string idvendedor = "";
                 string idpais = "";
@@ -130,13 +121,13 @@ namespace Equipo1
                 comando.Parameters.AddWithValue("@idcliente", idTcliente);
                 comando.Parameters.AddWithValue("@Cantidad_Pasajeros", cantidadpasajeros);
 
-                // Para el control de errores en tiempo de ejecución                
+                           
                 try
                 {
-                    // MessageBox.Show(descripcion + " " + precio + " " + idTipo); //TEST - Verifica datos OK
+                    
                     cn.Open();
                     int respuesta = comando.ExecuteNonQuery();
-                    // MessageBox.Show(respuesta.ToString());  // TEST - Verifica respuesta
+                   
 
                     if (respuesta == 1)
                     {
@@ -145,11 +136,6 @@ namespace Equipo1
                     }
 
                 }
-                //catch (SqlException sqlEx)
-                //{
-                //    MessageBox.Show(sqlEx.Message);
-                //    cn.Close();
-                //}
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -200,6 +186,6 @@ namespace Equipo1
                 }
             }
             return respuesta;
-        }//FUNCION VER SI LOS CONTROLES ESTAN VACIOS
+        }
     }
 }

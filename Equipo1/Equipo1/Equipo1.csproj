@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\..\OneDrive\Desktop\TRABAJO PROGRAMA2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="..\..\..\..\..\..\OneDrive\Desktop\TRABAJO PROGRAMA2.Designer.cs">
-      <DependentUpon>TRABAJO PROGRAMA2.cs</DependentUpon>
-    </Compile>
     <Compile Include="CLIENTE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,9 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="..\..\..\..\..\..\OneDrive\Desktop\TRABAJO PROGRAMA2.resx">
-      <DependentUpon>TRABAJO PROGRAMA2.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="VENTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VENTAS.designer.cs">
+      <DependentUpon>VENTAS.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CLIENTE.resx">
       <DependentUpon>CLIENTE.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +99,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VENTAS.resx">
+      <DependentUpon>VENTAS.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

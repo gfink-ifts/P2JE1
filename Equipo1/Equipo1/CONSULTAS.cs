@@ -25,5 +25,34 @@ namespace Equipo1
         {
             cn = new SqlConnection(cadenaConex);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
+        // Funciones Propias:
+        // ------------------------------------------
+
+        // Carga DataGridView
+        void CargarDataGrid()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string consulta = "SELECT VEN.idVendedor ven.Nombre, VEN.Apellido " +
+                                "FROM Ventas AS V, Vendedores AS ven, Paises AS p, Ciudades AS c";
+
+            // FALTA SEGUIR 
+
+
+            da = new SqlDataAdapter(consulta, cn);
+            cn.Open();
+            da.Fill(dt);
+            cn.Close();
+            dataGrid_Vendedores.DataSource = dt;
+            dataGrid_Vendedores.Columns[0].Visible = false;
+        }
     }
 }

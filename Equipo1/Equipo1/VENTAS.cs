@@ -30,10 +30,9 @@ namespace Equipo1
             cargarcomboPais();
             
 
-            cbo_orden.Items.Add("MAYOR VENTA");
-            cbo_orden.Items.Add("MENOR VENTA");
-            cbo_orden.Items.Add("FECHA MAS RECIENTE");
-            cbo_orden.Items.Add("FECHA MENOS RECIENTE");
+            cbo_orden.Items.Add("ORDENAR DE MENOR A MAYOR");
+            cbo_orden.Items.Add("ORDENAR DE MAYOR A MENOR");
+            
         }
         void cargarcomboCLIENTE()
         {
@@ -280,17 +279,44 @@ namespace Equipo1
         }
 
         private void btn_Ver_Ventas_Click(object sender, EventArgs e)
-        {                     
+        {
+            string seleccion = "";
+            string orden = "",query="";
+            seleccion = cbo_orden.SelectedItem.ToString();
+
+            if (seleccion == "ORDENAR DE MENOR A MAYOR")
+            {
+                query = "select cl.Nombre,cl.Apellido, v.Cantidad_Pasajeros, ven.Nombre, ven.Apellido, v.idVentas, p.Pais, v.Fecha_de_Venta, p.Precio+c.Precio as total " +
+                               "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p, Ciudades as c " +
+                               "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and p.idPais = c.idPais " +
+                               "order by cl.nombre asc";
+            }
+            if (seleccion == "ORDENAR DE MAYOR A MENOR")
+            {
+                 query = "select cl.Nombre,cl.Apellido, v.Cantidad_Pasajeros, ven.Nombre, ven.Apellido, v.idVentas, p.Pais, v.Fecha_de_Venta, p.Precio+c.Precio as total " +
+                               "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p, Ciudades as c " +
+                               "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and p.idPais = c.idPais " +
+                               "order by cl.nombre desc";
+
+            }
             SqlDataAdapter da;
             DataTable dt = new DataTable();
-            string query = "select v.idVentas,p.Pais, v.Fecha_de_Venta,cl.Nombre,cl.Apellido,v.Cantidad_Pasajeros, ven.Nombre,ven.Apellido,p.Precio+c.Precio as total " +
-                               "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p, Ciudades as c " +
-                               "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and p.idPais = c.idPais ";
+            
             cn.Open();
             da = new SqlDataAdapter(query, cn);
-            da.Fill(dt);
-            cn.Close();
+
+            
+            da.SelectCommand.Parameters.AddWithValue("@orden", orden);
+
+            da.Fill(dt);           
             dataGrid_ventasGeneral.DataSource = dt;
+            cn.Close();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

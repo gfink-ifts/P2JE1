@@ -54,7 +54,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).BeginInit();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
@@ -64,6 +63,7 @@
             // 
             // dataGrid_Venta_Nueva
             // 
+            this.dataGrid_Venta_Nueva.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dataGrid_Venta_Nueva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_Venta_Nueva.Location = new System.Drawing.Point(12, 138);
             this.dataGrid_Venta_Nueva.Name = "dataGrid_Venta_Nueva";
@@ -238,6 +238,7 @@
             // 
             // dataGrid_ventasGeneral
             // 
+            this.dataGrid_ventasGeneral.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGrid_ventasGeneral.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_ventasGeneral.Location = new System.Drawing.Point(12, 49);
             this.dataGrid_ventasGeneral.Name = "dataGrid_ventasGeneral";
@@ -271,7 +272,7 @@
             this.cbo_orden.FormattingEnabled = true;
             this.cbo_orden.Location = new System.Drawing.Point(521, 19);
             this.cbo_orden.Name = "cbo_orden";
-            this.cbo_orden.Size = new System.Drawing.Size(134, 21);
+            this.cbo_orden.Size = new System.Drawing.Size(181, 21);
             this.cbo_orden.TabIndex = 15;
             this.cbo_orden.SelectionChangeCommitted += new System.EventHandler(this.cbo_orden_SelectionChangeCommitted);
             // 
@@ -293,6 +294,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -309,21 +311,12 @@
             this.txt_fechaalta.Size = new System.Drawing.Size(84, 20);
             this.txt_fechaalta.TabIndex = 15;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(163, 438);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "label6";
-            // 
             // VENTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_fechaalta);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -376,6 +369,5 @@
         private System.Windows.Forms.Button btn_carga;
         private System.Windows.Forms.Label txt_cant_ciudades;
         private System.Windows.Forms.TextBox txt_Cantidad_Ciudades;
-        private System.Windows.Forms.Label label6;
     }
 }

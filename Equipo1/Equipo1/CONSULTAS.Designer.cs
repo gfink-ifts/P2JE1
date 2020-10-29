@@ -98,9 +98,11 @@
             // 
             // dataGrid_Vendedores
             // 
+            this.dataGrid_Vendedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid_Vendedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid_Vendedores.Location = new System.Drawing.Point(6, 19);
             this.dataGrid_Vendedores.Name = "dataGrid_Vendedores";
+            this.dataGrid_Vendedores.ReadOnly = true;
             this.dataGrid_Vendedores.Size = new System.Drawing.Size(232, 319);
             this.dataGrid_Vendedores.TabIndex = 11;
             // 
@@ -208,6 +210,7 @@
             this.rdb_unVendedor.TabStop = true;
             this.rdb_unVendedor.Text = "Vendedor :";
             this.rdb_unVendedor.UseVisualStyleBackColor = true;
+            this.rdb_unVendedor.CheckedChanged += new System.EventHandler(this.rdb_unVendedor_CheckedChanged);
             // 
             // rdb_todos
             // 

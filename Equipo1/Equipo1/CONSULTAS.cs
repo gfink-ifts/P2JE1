@@ -24,6 +24,9 @@ namespace Equipo1
         private void CONSULTAS_Load(object sender, EventArgs e)
         {
             cn = new SqlConnection(cadenaConex);
+            rdb_todos.Checked = true;
+            rdb_todosAños.Checked = true;
+            CargarDataGrid();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,18 +44,46 @@ namespace Equipo1
         {
             SqlDataAdapter da;
             DataTable dt = new DataTable();
-            string consulta = "SELECT VEN.idVendedor ven.Nombre, VEN.Apellido " +
-                                "FROM Ventas AS V, Vendedores AS ven, Paises AS p, Ciudades AS c";
+            string consultaVenta = "SELECT V.Fecha_de_Venta, VDOR.idVendedor, VDOR.Nombre + ' ' + VDOR.Apellido AS Vendedor, (P.Precio * V.Cantidad_Pasajeros) AS Monto " +
+                                    "FROM Ventas AS V, Vendedores AS VDOR, Paises AS P " +
+                                    "WHERE V.idVendedor = VDOR.idVendedor AND V.idPais = P.idPais";
+            string ventaPlus = " and VDOR.idVendedor = 1";
+
+            string consultaDestino = "SELECT VEN.idVendedor ven.Nombre, VEN.Apellido " +
+                    "FROM Ventas AS V, Vendedores AS ven, Paises AS p, Ciudades AS c";
 
             // FALTA SEGUIR 
 
+            if (rdb_todos.Checked)
+            {
+                da = new SqlDataAdapter(consultaVenta, cn);
+            }
+            else
+            {
+                da = new SqlDataAdapter(consultaVenta + ventaPlus, cn);
+            }
 
-            da = new SqlDataAdapter(consulta, cn);
             cn.Open();
             da.Fill(dt);
             cn.Close();
             dataGrid_Vendedores.DataSource = dt;
             dataGrid_Vendedores.Columns[0].Visible = false;
+            dataGrid_Vendedores.Columns[1].Visible = false;
+
         }
+
+        private void rdb_unVendedor_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarDataGrid();
+        }
+
+        // Función para cargar comboBox de años
+
+        //cbo_años.Items.Add("2017");
+        //cbo_años.Items.Add("2018");
+        //cbo_años.Items.Add("2019");
+        //cbo_años.Items.Add("2020");
+
+
     }
 }

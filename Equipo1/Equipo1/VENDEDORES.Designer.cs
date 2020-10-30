@@ -144,9 +144,9 @@
             this.chk_borrar.AutoSize = true;
             this.chk_borrar.Location = new System.Drawing.Point(6, 32);
             this.chk_borrar.Name = "chk_borrar";
-            this.chk_borrar.Size = new System.Drawing.Size(80, 17);
+            this.chk_borrar.Size = new System.Drawing.Size(93, 17);
             this.chk_borrar.TabIndex = 0;
-            this.chk_borrar.Text = "checkBox1";
+            this.chk_borrar.Text = "Habilitar Bajas";
             this.chk_borrar.UseVisualStyleBackColor = true;
             this.chk_borrar.CheckedChanged += new System.EventHandler(this.chk_borrar_CheckedChanged);
             // 
@@ -163,7 +163,7 @@
             // lbl_test
             // 
             this.lbl_test.AutoSize = true;
-            this.lbl_test.Location = new System.Drawing.Point(63, 483);
+            this.lbl_test.Location = new System.Drawing.Point(12, 471);
             this.lbl_test.Name = "lbl_test";
             this.lbl_test.Size = new System.Drawing.Size(35, 13);
             this.lbl_test.TabIndex = 29;

@@ -58,8 +58,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.cbo_años = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.rdb_todosAños = new System.Windows.Forms.RadioButton();
-            this.rdb_unAño = new System.Windows.Forms.RadioButton();
+            this.rdb_todasCiudades = new System.Windows.Forms.RadioButton();
+            this.rdb_unaCiudad = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.gb_Vendedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Vendedores)).BeginInit();
@@ -241,7 +241,7 @@
             this.groupBox1.Size = new System.Drawing.Size(455, 114);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtrado de Vendedores:";
+            this.groupBox1.Text = "Filtrado de Ventas:";
             // 
             // gb_destinos
             // 
@@ -353,44 +353,44 @@
             // cbo_años
             // 
             this.cbo_años.FormattingEnabled = true;
-            this.cbo_años.Location = new System.Drawing.Point(166, 31);
+            this.cbo_años.Location = new System.Drawing.Point(174, 31);
             this.cbo_años.Name = "cbo_años";
-            this.cbo_años.Size = new System.Drawing.Size(72, 21);
+            this.cbo_años.Size = new System.Drawing.Size(109, 21);
             this.cbo_años.TabIndex = 4;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.rdb_todosAños);
+            this.groupBox5.Controls.Add(this.rdb_todasCiudades);
             this.groupBox5.Controls.Add(this.cbo_años);
-            this.groupBox5.Controls.Add(this.rdb_unAño);
+            this.groupBox5.Controls.Add(this.rdb_unaCiudad);
             this.groupBox5.Location = new System.Drawing.Point(473, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(265, 114);
+            this.groupBox5.Size = new System.Drawing.Size(314, 114);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Filtrado por Años";
+            this.groupBox5.Text = "Filtrado por Ciudad :";
             // 
-            // rdb_todosAños
+            // rdb_todasCiudades
             // 
-            this.rdb_todosAños.AutoSize = true;
-            this.rdb_todosAños.Location = new System.Drawing.Point(24, 67);
-            this.rdb_todosAños.Name = "rdb_todosAños";
-            this.rdb_todosAños.Size = new System.Drawing.Size(98, 17);
-            this.rdb_todosAños.TabIndex = 1;
-            this.rdb_todosAños.TabStop = true;
-            this.rdb_todosAños.Text = "Todos los Años";
-            this.rdb_todosAños.UseVisualStyleBackColor = true;
+            this.rdb_todasCiudades.AutoSize = true;
+            this.rdb_todasCiudades.Location = new System.Drawing.Point(24, 67);
+            this.rdb_todasCiudades.Name = "rdb_todasCiudades";
+            this.rdb_todasCiudades.Size = new System.Drawing.Size(118, 17);
+            this.rdb_todasCiudades.TabIndex = 1;
+            this.rdb_todasCiudades.TabStop = true;
+            this.rdb_todasCiudades.Text = "Todos las Ciudades";
+            this.rdb_todasCiudades.UseVisualStyleBackColor = true;
             // 
-            // rdb_unAño
+            // rdb_unaCiudad
             // 
-            this.rdb_unAño.AutoSize = true;
-            this.rdb_unAño.Location = new System.Drawing.Point(24, 32);
-            this.rdb_unAño.Name = "rdb_unAño";
-            this.rdb_unAño.Size = new System.Drawing.Size(124, 17);
-            this.rdb_unAño.TabIndex = 0;
-            this.rdb_unAño.TabStop = true;
-            this.rdb_unAño.Text = "Seleccionar un Año :";
-            this.rdb_unAño.UseVisualStyleBackColor = true;
+            this.rdb_unaCiudad.AutoSize = true;
+            this.rdb_unaCiudad.Location = new System.Drawing.Point(24, 32);
+            this.rdb_unaCiudad.Name = "rdb_unaCiudad";
+            this.rdb_unaCiudad.Size = new System.Drawing.Size(144, 17);
+            this.rdb_unaCiudad.TabIndex = 0;
+            this.rdb_unaCiudad.TabStop = true;
+            this.rdb_unaCiudad.Text = "Seleccionar una Ciudad :";
+            this.rdb_unaCiudad.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -464,8 +464,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cbo_años;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton rdb_todosAños;
-        private System.Windows.Forms.RadioButton rdb_unAño;
+        private System.Windows.Forms.RadioButton rdb_todasCiudades;
+        private System.Windows.Forms.RadioButton rdb_unaCiudad;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lbl_totalVendido;

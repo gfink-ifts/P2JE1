@@ -25,7 +25,7 @@ namespace Equipo1
         {
             cn = new SqlConnection(cadenaConex);
             rdb_todos.Checked = true;
-            rdb_todosAños.Checked = true;
+            rdb_todasCiudades.Checked = true;
             CargarDataGrid();
         }
 
@@ -76,14 +76,6 @@ namespace Equipo1
         {
             CargarDataGrid();
         }
-
-        // Función para cargar comboBox de años
-
-        //cbo_años.Items.Add("2017");
-        //cbo_años.Items.Add("2018");
-        //cbo_años.Items.Add("2019");
-        //cbo_años.Items.Add("2020");
-
 
     }
 }

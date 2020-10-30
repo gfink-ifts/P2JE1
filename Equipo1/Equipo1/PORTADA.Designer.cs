@@ -34,6 +34,7 @@
             this.btn_Consultas = new System.Windows.Forms.Button();
             this.gru_Viajes = new System.Windows.Forms.GroupBox();
             this.btn_Salir = new System.Windows.Forms.Button();
+            this.btn_vendedores = new System.Windows.Forms.Button();
             this.gru_Viajes.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +88,7 @@
             // 
             // gru_Viajes
             // 
+            this.gru_Viajes.Controls.Add(this.btn_vendedores);
             this.gru_Viajes.Controls.Add(this.btn_Consultas);
             this.gru_Viajes.Controls.Add(this.btn_Agre_o_Modi_Ventas);
             this.gru_Viajes.Controls.Add(this.btn_Agr_o_Mod_Produ);
@@ -108,6 +110,18 @@
             this.btn_Salir.Text = "CERRAR APLICACIÓN";
             this.btn_Salir.UseVisualStyleBackColor = true;
             this.btn_Salir.Click += new System.EventHandler(this.btn_Salir_Click);
+            // 
+            // btn_vendedores
+            // 
+            this.btn_vendedores.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_vendedores.Location = new System.Drawing.Point(172, 112);
+            this.btn_vendedores.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_vendedores.Name = "btn_vendedores";
+            this.btn_vendedores.Size = new System.Drawing.Size(139, 45);
+            this.btn_vendedores.TabIndex = 4;
+            this.btn_vendedores.Text = "VENDEDORES";
+            this.btn_vendedores.UseVisualStyleBackColor = true;
+            this.btn_vendedores.Click += new System.EventHandler(this.btn_vendedores_Click);
             // 
             // PORTADA
             // 
@@ -133,6 +147,7 @@
         private System.Windows.Forms.Button btn_Consultas;
         private System.Windows.Forms.GroupBox gru_Viajes;
         private System.Windows.Forms.Button btn_Salir;
+        private System.Windows.Forms.Button btn_vendedores;
     }
 }
 

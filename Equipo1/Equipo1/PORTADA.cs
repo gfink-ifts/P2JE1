@@ -55,10 +55,18 @@ namespace Equipo1
             formconsultas.Show();
         }
 
+        private void btn_vendedores_Click(object sender, EventArgs e)
+        {
+            VENDEDORES formvendedores = new VENDEDORES();
+            formvendedores.cadenaConex = dBase;
+            formvendedores.Show();
+        }
+
         private void btn_Salir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }
  

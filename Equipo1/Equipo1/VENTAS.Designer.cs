@@ -38,12 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupVentas = new System.Windows.Forms.GroupBox();
             this.groupDESTINO = new System.Windows.Forms.GroupBox();
-            this.txt_cant_ciudades = new System.Windows.Forms.Label();
-            this.txt_Cantidad_Ciudades = new System.Windows.Forms.TextBox();
-            this.btn_carga = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_cant_PERS = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGrid_ventasGeneral = new System.Windows.Forms.DataGridView();
@@ -54,6 +48,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).BeginInit();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
@@ -150,12 +147,9 @@
             // 
             // groupDESTINO
             // 
-            this.groupDESTINO.Controls.Add(this.txt_cant_ciudades);
-            this.groupDESTINO.Controls.Add(this.txt_Cantidad_Ciudades);
-            this.groupDESTINO.Controls.Add(this.btn_carga);
-            this.groupDESTINO.Controls.Add(this.checkBox3);
-            this.groupDESTINO.Controls.Add(this.checkBox2);
-            this.groupDESTINO.Controls.Add(this.checkBox1);
+            this.groupDESTINO.Controls.Add(this.radioButton3);
+            this.groupDESTINO.Controls.Add(this.radioButton2);
+            this.groupDESTINO.Controls.Add(this.radioButton1);
             this.groupDESTINO.Controls.Add(this.label2);
             this.groupDESTINO.Controls.Add(this.cbo_PAIS);
             this.groupDESTINO.Location = new System.Drawing.Point(281, 9);
@@ -164,62 +158,6 @@
             this.groupDESTINO.TabIndex = 17;
             this.groupDESTINO.TabStop = false;
             this.groupDESTINO.Text = "DESTINO";
-            // 
-            // txt_cant_ciudades
-            // 
-            this.txt_cant_ciudades.AutoSize = true;
-            this.txt_cant_ciudades.Location = new System.Drawing.Point(234, 39);
-            this.txt_cant_ciudades.Name = "txt_cant_ciudades";
-            this.txt_cant_ciudades.Size = new System.Drawing.Size(65, 13);
-            this.txt_cant_ciudades.TabIndex = 19;
-            this.txt_cant_ciudades.Text = "CANTIDAD:";
-            // 
-            // txt_Cantidad_Ciudades
-            // 
-            this.txt_Cantidad_Ciudades.Location = new System.Drawing.Point(302, 35);
-            this.txt_Cantidad_Ciudades.Name = "txt_Cantidad_Ciudades";
-            this.txt_Cantidad_Ciudades.Size = new System.Drawing.Size(26, 20);
-            this.txt_Cantidad_Ciudades.TabIndex = 18;
-            // 
-            // btn_carga
-            // 
-            this.btn_carga.Location = new System.Drawing.Point(263, 9);
-            this.btn_carga.Name = "btn_carga";
-            this.btn_carga.Size = new System.Drawing.Size(71, 24);
-            this.btn_carga.TabIndex = 17;
-            this.btn_carga.Text = "CARGA";
-            this.btn_carga.UseVisualStyleBackColor = true;
-            this.btn_carga.Click += new System.EventHandler(this.btn_carga_Click);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(248, 61);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 16;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(135, 61);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 61);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 14;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txt_cant_PERS
             // 
@@ -312,6 +250,39 @@
             this.txt_fechaalta.Size = new System.Drawing.Size(84, 20);
             this.txt_fechaalta.TabIndex = 15;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(20, 61);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 20;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(134, 61);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 21;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(243, 61);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.TabIndex = 22;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // VENTAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,13 +333,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbo_orden;
         private System.Windows.Forms.GroupBox groupDESTINO;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txt_fechaalta;
-        private System.Windows.Forms.Button btn_carga;
-        private System.Windows.Forms.Label txt_cant_ciudades;
-        private System.Windows.Forms.TextBox txt_Cantidad_Ciudades;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

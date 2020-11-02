@@ -30,18 +30,25 @@
         {
             this.dataGrid_Cliente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.txt_ciudad = new System.Windows.Forms.TextBox();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
+            this.txt_apellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btn_agregar = new System.Windows.Forms.Button();
+            this.chk_modificar = new System.Windows.Forms.CheckBox();
+            this.cbo_clientes = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txt_fecha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Cliente)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGrid_Cliente
@@ -62,42 +69,42 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "CARGA DE CLIENTE";
             // 
-            // textBox1
+            // txt_nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 354);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 26);
-            this.textBox1.TabIndex = 2;
+            this.txt_nombre.Location = new System.Drawing.Point(12, 71);
+            this.txt_nombre.Multiline = true;
+            this.txt_nombre.Name = "txt_nombre";
+            this.txt_nombre.Size = new System.Drawing.Size(144, 26);
+            this.txt_nombre.TabIndex = 2;
             // 
-            // textBox3
+            // txt_ciudad
             // 
-            this.textBox3.Location = new System.Drawing.Point(676, 354);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 26);
-            this.textBox3.TabIndex = 4;
+            this.txt_ciudad.Location = new System.Drawing.Point(676, 71);
+            this.txt_ciudad.Multiline = true;
+            this.txt_ciudad.Name = "txt_ciudad";
+            this.txt_ciudad.Size = new System.Drawing.Size(144, 26);
+            this.txt_ciudad.TabIndex = 4;
             // 
-            // textBox4
+            // txt_direccion
             // 
-            this.textBox4.Location = new System.Drawing.Point(457, 354);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 26);
-            this.textBox4.TabIndex = 5;
+            this.txt_direccion.Location = new System.Drawing.Point(475, 71);
+            this.txt_direccion.Multiline = true;
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(144, 26);
+            this.txt_direccion.TabIndex = 5;
             // 
-            // textBox5
+            // txt_apellido
             // 
-            this.textBox5.Location = new System.Drawing.Point(216, 354);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 26);
-            this.textBox5.TabIndex = 6;
+            this.txt_apellido.Location = new System.Drawing.Point(233, 71);
+            this.txt_apellido.Multiline = true;
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Size = new System.Drawing.Size(144, 26);
+            this.txt_apellido.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 338);
+            this.label2.Location = new System.Drawing.Point(54, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 7;
@@ -106,7 +113,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(498, 338);
+            this.label3.Location = new System.Drawing.Point(513, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 8;
@@ -115,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 338);
+            this.label4.Location = new System.Drawing.Point(250, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 9;
@@ -124,7 +131,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(673, 9);
+            this.label5.Location = new System.Drawing.Point(670, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 13);
             this.label5.TabIndex = 10;
@@ -133,7 +140,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(725, 338);
+            this.label6.Location = new System.Drawing.Point(727, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 11;
@@ -141,42 +148,107 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(610, 25);
+            this.dateTimePicker1.Location = new System.Drawing.Point(802, 25);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(211, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(19, 20);
             this.dateTimePicker1.TabIndex = 12;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // btn_agregar
+            // 
+            this.btn_agregar.Location = new System.Drawing.Point(349, 117);
+            this.btn_agregar.Name = "btn_agregar";
+            this.btn_agregar.Size = new System.Drawing.Size(127, 30);
+            this.btn_agregar.TabIndex = 13;
+            this.btn_agregar.Text = "AGREGAR";
+            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
+            // 
+            // chk_modificar
+            // 
+            this.chk_modificar.AutoSize = true;
+            this.chk_modificar.Location = new System.Drawing.Point(233, 117);
+            this.chk_modificar.Name = "chk_modificar";
+            this.chk_modificar.Size = new System.Drawing.Size(85, 17);
+            this.chk_modificar.TabIndex = 14;
+            this.chk_modificar.Text = "MODIFICAR";
+            this.chk_modificar.UseVisualStyleBackColor = true;
+            this.chk_modificar.CheckedChanged += new System.EventHandler(this.chk_modificar_CheckedChanged);
+            // 
+            // cbo_clientes
+            // 
+            this.cbo_clientes.FormattingEnabled = true;
+            this.cbo_clientes.Location = new System.Drawing.Point(330, 6);
+            this.cbo_clientes.Name = "cbo_clientes";
+            this.cbo_clientes.Size = new System.Drawing.Size(161, 21);
+            this.cbo_clientes.TabIndex = 15;
+            this.cbo_clientes.SelectionChangeCommitted += new System.EventHandler(this.cbo_clientes_SelectionChangeCommitted);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(259, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "CLIENTES";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.cbo_clientes);
+            this.groupBox1.Controls.Add(this.chk_modificar);
+            this.groupBox1.Controls.Add(this.btn_agregar);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txt_apellido);
+            this.groupBox1.Controls.Add(this.txt_direccion);
+            this.groupBox1.Controls.Add(this.txt_ciudad);
+            this.groupBox1.Controls.Add(this.txt_nombre);
+            this.groupBox1.Location = new System.Drawing.Point(-3, 320);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(823, 159);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "CLIENTES";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(349, 441);
+            this.button1.Location = new System.Drawing.Point(735, 485);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 30);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 22);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txt_fecha
+            // 
+            this.txt_fecha.Location = new System.Drawing.Point(619, 25);
+            this.txt_fecha.Name = "txt_fecha";
+            this.txt_fecha.Size = new System.Drawing.Size(177, 20);
+            this.txt_fecha.TabIndex = 19;
             // 
             // CLIENTE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 508);
+            this.Controls.Add(this.txt_fecha);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGrid_Cliente);
             this.Name = "CLIENTE";
             this.Text = "CLIENTE";
             this.Load += new System.EventHandler(this.CLIENTE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Cliente)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,16 +258,22 @@
 
         private System.Windows.Forms.DataGridView dataGrid_Cliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.TextBox txt_ciudad;
+        private System.Windows.Forms.TextBox txt_direccion;
+        private System.Windows.Forms.TextBox txt_apellido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btn_agregar;
+        private System.Windows.Forms.CheckBox chk_modificar;
+        private System.Windows.Forms.ComboBox cbo_clientes;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_fecha;
     }
 }

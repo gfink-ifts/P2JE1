@@ -318,6 +318,11 @@ namespace Equipo1
         {
             this.Close();
         }
+
+        private void groupVentas_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

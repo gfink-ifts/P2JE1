@@ -146,6 +146,7 @@
             this.groupVentas.TabIndex = 10;
             this.groupVentas.TabStop = false;
             this.groupVentas.Text = "VENTAS";
+            this.groupVentas.Enter += new System.EventHandler(this.groupVentas_Enter);
             // 
             // groupDESTINO
             // 

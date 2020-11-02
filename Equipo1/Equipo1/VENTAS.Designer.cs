@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGrid_Venta_Nueva = new System.Windows.Forms.DataGridView();
             this.btn_Nueva_Venta = new System.Windows.Forms.Button();
             this.cbo_Clientes = new System.Windows.Forms.ComboBox();
             this.cbo_PAIS = new System.Windows.Forms.ComboBox();
@@ -38,6 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupVentas = new System.Windows.Forms.GroupBox();
             this.groupDESTINO = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.txt_cant_PERS = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGrid_ventasGeneral = new System.Windows.Forms.DataGridView();
@@ -48,24 +50,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_precio = new System.Windows.Forms.Label();
+            this.lbl_cliente = new System.Windows.Forms.Label();
+            this.lbl_vendedor = new System.Windows.Forms.Label();
+            this.lbl_pais = new System.Windows.Forms.Label();
+            this.lbl_pre = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbl_apellido_cliente = new System.Windows.Forms.Label();
+            this.lbl_apelli_vende = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ventasGeneral)).BeginInit();
             this.gru_consulta_ventas.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGrid_Venta_Nueva
-            // 
-            this.dataGrid_Venta_Nueva.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGrid_Venta_Nueva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Venta_Nueva.Location = new System.Drawing.Point(12, 138);
-            this.dataGrid_Venta_Nueva.Name = "dataGrid_Venta_Nueva";
-            this.dataGrid_Venta_Nueva.Size = new System.Drawing.Size(759, 67);
-            this.dataGrid_Venta_Nueva.TabIndex = 0;
             // 
             // btn_Nueva_Venta
             // 
@@ -147,6 +150,8 @@
             // 
             // groupDESTINO
             // 
+            this.groupDESTINO.Controls.Add(this.lbl_precio);
+            this.groupDESTINO.Controls.Add(this.label6);
             this.groupDESTINO.Controls.Add(this.radioButton3);
             this.groupDESTINO.Controls.Add(this.radioButton2);
             this.groupDESTINO.Controls.Add(this.radioButton1);
@@ -158,6 +163,39 @@
             this.groupDESTINO.TabIndex = 17;
             this.groupDESTINO.TabStop = false;
             this.groupDESTINO.Text = "DESTINO";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(243, 61);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.TabIndex = 22;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(134, 61);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.TabIndex = 21;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(20, 61);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.TabIndex = 20;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // txt_cant_PERS
             // 
@@ -250,38 +288,132 @@
             this.txt_fechaalta.Size = new System.Drawing.Size(84, 20);
             this.txt_fechaalta.TabIndex = 15;
             // 
-            // radioButton1
+            // label6
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(20, 61);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 20;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(252, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "PRECIO";
             // 
-            // radioButton2
+            // lbl_precio
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(134, 61);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 21;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.lbl_precio.AutoSize = true;
+            this.lbl_precio.Location = new System.Drawing.Point(299, 27);
+            this.lbl_precio.Name = "lbl_precio";
+            this.lbl_precio.Size = new System.Drawing.Size(35, 13);
+            this.lbl_precio.TabIndex = 24;
+            this.lbl_precio.Text = "label7";
             // 
-            // radioButton3
+            // lbl_cliente
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(243, 61);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 22;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.lbl_cliente.AutoSize = true;
+            this.lbl_cliente.Location = new System.Drawing.Point(70, 10);
+            this.lbl_cliente.Name = "lbl_cliente";
+            this.lbl_cliente.Size = new System.Drawing.Size(35, 13);
+            this.lbl_cliente.TabIndex = 16;
+            this.lbl_cliente.Text = "label7";
+            // 
+            // lbl_vendedor
+            // 
+            this.lbl_vendedor.AutoSize = true;
+            this.lbl_vendedor.Location = new System.Drawing.Point(273, 10);
+            this.lbl_vendedor.Name = "lbl_vendedor";
+            this.lbl_vendedor.Size = new System.Drawing.Size(35, 13);
+            this.lbl_vendedor.TabIndex = 17;
+            this.lbl_vendedor.Text = "label8";
+            // 
+            // lbl_pais
+            // 
+            this.lbl_pais.AutoSize = true;
+            this.lbl_pais.Location = new System.Drawing.Point(467, 10);
+            this.lbl_pais.Name = "lbl_pais";
+            this.lbl_pais.Size = new System.Drawing.Size(35, 13);
+            this.lbl_pais.TabIndex = 18;
+            this.lbl_pais.Text = "label9";
+            // 
+            // lbl_pre
+            // 
+            this.lbl_pre.AutoSize = true;
+            this.lbl_pre.Location = new System.Drawing.Point(685, 10);
+            this.lbl_pre.Name = "lbl_pre";
+            this.lbl_pre.Size = new System.Drawing.Size(41, 13);
+            this.lbl_pre.TabIndex = 19;
+            this.lbl_pre.Text = "label10";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "CLIENTE";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(199, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "VENDEDOR";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(418, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "PAIS";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(595, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 13);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "PRECIO TOTAL";
+            // 
+            // lbl_apellido_cliente
+            // 
+            this.lbl_apellido_cliente.AutoSize = true;
+            this.lbl_apellido_cliente.Location = new System.Drawing.Point(111, 10);
+            this.lbl_apellido_cliente.Name = "lbl_apellido_cliente";
+            this.lbl_apellido_cliente.Size = new System.Drawing.Size(41, 13);
+            this.lbl_apellido_cliente.TabIndex = 24;
+            this.lbl_apellido_cliente.Text = "label11";
+            // 
+            // lbl_apelli_vende
+            // 
+            this.lbl_apelli_vende.AutoSize = true;
+            this.lbl_apelli_vende.Location = new System.Drawing.Point(323, 10);
+            this.lbl_apelli_vende.Name = "lbl_apelli_vende";
+            this.lbl_apelli_vende.Size = new System.Drawing.Size(41, 13);
+            this.lbl_apelli_vende.TabIndex = 25;
+            this.lbl_apelli_vende.Text = "label11";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.lbl_apelli_vende);
+            this.groupBox1.Controls.Add(this.lbl_apellido_cliente);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.lbl_pre);
+            this.groupBox1.Controls.Add(this.lbl_pais);
+            this.groupBox1.Controls.Add(this.lbl_vendedor);
+            this.groupBox1.Controls.Add(this.lbl_cliente);
+            this.groupBox1.Location = new System.Drawing.Point(12, 156);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(750, 40);
+            this.groupBox1.TabIndex = 26;
+            this.groupBox1.TabStop = false;
             // 
             // VENTAS
             // 
@@ -289,6 +421,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_fechaalta);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -296,11 +429,9 @@
             this.Controls.Add(this.groupVentas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbo_Clientes);
-            this.Controls.Add(this.dataGrid_Venta_Nueva);
             this.Name = "VENTAS";
             this.Text = "VENTAS";
             this.Load += new System.EventHandler(this.VENTAS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Venta_Nueva)).EndInit();
             this.groupVentas.ResumeLayout(false);
             this.groupVentas.PerformLayout();
             this.groupDESTINO.ResumeLayout(false);
@@ -308,14 +439,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ventasGeneral)).EndInit();
             this.gru_consulta_ventas.ResumeLayout(false);
             this.gru_consulta_ventas.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGrid_Venta_Nueva;
         private System.Windows.Forms.Button btn_Nueva_Venta;
         private System.Windows.Forms.ComboBox cbo_Clientes;
         private System.Windows.Forms.ComboBox cbo_PAIS;
@@ -338,5 +469,18 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label lbl_precio;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_cliente;
+        private System.Windows.Forms.Label lbl_vendedor;
+        private System.Windows.Forms.Label lbl_pais;
+        private System.Windows.Forms.Label lbl_pre;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_apellido_cliente;
+        private System.Windows.Forms.Label lbl_apelli_vende;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

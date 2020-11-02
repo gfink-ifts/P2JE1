@@ -96,7 +96,7 @@ namespace Equipo1
             {              
                 string fecha;               
                 string instruccion = "INSERT INTO Ventas(Fecha_de_Venta, idVendedor,idPais,idCliente,Cantidad_Pasajeros) " +
-                                        "VALUES (@fecha, @idvendedor, @idpais,@idcliente,@Cantidad_Pasajeros)";
+                                      "VALUES (@fecha, @idvendedor, @idpais,@idcliente,@Cantidad_Pasajeros)";
                 string mensajeNuevo = "Venta nueva ingresada Correctamente";
                 fecha = txt_fechaalta.Text;
                 string idvendedor = "";
@@ -152,10 +152,11 @@ namespace Equipo1
             DataTable dtCantidad = new DataTable();
             
             
-            string consulta = "select v.Fecha_de_Venta,cl.Nombre,cl.Apellido,v.Cantidad_Pasajeros, ven.Nombre,ven.Apellido,p.Precio + c.Precio as total " +
-                              "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p, Ciudades as c " +
-                              "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and p.idPais = c.idPais  and v.idVentas = @idventa ";
+            string consulta = "select cl.Nombre,cl.apellido,ven.Nombre,ven.apellido, p.Pais ,v.Fecha_de_Venta,v.Cantidad_Pasajeros " +
+                              "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p " +
+                              "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and v.idVentas = @idventa ";
 
+         
             string consultaCantidad = "select count (idVentas)  as cantidad from Ventas";
 
             daCantidad = new SqlDataAdapter(consultaCantidad, cn);
@@ -167,10 +168,19 @@ namespace Equipo1
             idventa = dtCantidad.Rows[0][0].ToString();
                                            
             da.SelectCommand.Parameters.AddWithValue("@idventa", idventa);
-            
+
+            int preciototal = Convert.ToInt32(txt_cant_PERS.Text) * Convert.ToInt32(lbl_precio.Text);
 
             da.Fill(dt);
-            dataGrid_Venta_Nueva.DataSource = dt;
+            
+            lbl_cliente.Text= dt.Rows[0][0].ToString();
+            lbl_apellido_cliente.Text = dt.Rows[0][1].ToString();
+            lbl_vendedor.Text = dt.Rows[0][2].ToString();
+            lbl_apelli_vende.Text = dt.Rows[0][3].ToString();
+            lbl_pre.Text = preciototal.ToString();
+            lbl_pais.Text = dt.Rows[0][4].ToString();
+
+            
             cn.Close();
 
         }
@@ -222,7 +232,7 @@ namespace Equipo1
                 SqlDataAdapter da;
                 DataTable dt = new DataTable();
                 cn.Open();
-                string consulta = "select c.Ciudad "+
+                string consulta = "select c.Ciudad,c.Precio  " +
                                   "from Paises as p, Ciudades as c "+
                                   "where p.idPais = c.idPais and p.idPais = @idpais";
                 da = new SqlDataAdapter(consulta, cn);
@@ -234,6 +244,7 @@ namespace Equipo1
                     radioButton1.Text = dt.Rows[0][0].ToString();
                     radioButton2.Text = dt.Rows[1][0].ToString();
                     radioButton3.Text = dt.Rows[2][0].ToString();
+                    lbl_precio.Text   = dt.Rows[0][1].ToString();
                 }
                 else
                 {

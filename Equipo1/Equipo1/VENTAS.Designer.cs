@@ -63,6 +63,8 @@
             this.lbl_apellido_cliente = new System.Windows.Forms.Label();
             this.lbl_apelli_vende = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_ciudad_elegida = new System.Windows.Forms.Label();
+            this.lbl_ciudad_cargada = new System.Windows.Forms.Label();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_ventasGeneral)).BeginInit();
@@ -150,6 +152,7 @@
             // 
             // groupDESTINO
             // 
+            this.groupDESTINO.Controls.Add(this.lbl_ciudad_elegida);
             this.groupDESTINO.Controls.Add(this.lbl_precio);
             this.groupDESTINO.Controls.Add(this.label6);
             this.groupDESTINO.Controls.Add(this.radioButton3);
@@ -399,6 +402,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox1.Controls.Add(this.lbl_ciudad_cargada);
             this.groupBox1.Controls.Add(this.lbl_apelli_vende);
             this.groupBox1.Controls.Add(this.lbl_apellido_cliente);
             this.groupBox1.Controls.Add(this.label10);
@@ -414,6 +418,24 @@
             this.groupBox1.Size = new System.Drawing.Size(750, 40);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
+            // 
+            // lbl_ciudad_elegida
+            // 
+            this.lbl_ciudad_elegida.AutoSize = true;
+            this.lbl_ciudad_elegida.Location = new System.Drawing.Point(293, 45);
+            this.lbl_ciudad_elegida.Name = "lbl_ciudad_elegida";
+            this.lbl_ciudad_elegida.Size = new System.Drawing.Size(41, 13);
+            this.lbl_ciudad_elegida.TabIndex = 26;
+            this.lbl_ciudad_elegida.Text = "label11";
+            // 
+            // lbl_ciudad_cargada
+            // 
+            this.lbl_ciudad_cargada.AutoSize = true;
+            this.lbl_ciudad_cargada.Location = new System.Drawing.Point(515, 22);
+            this.lbl_ciudad_cargada.Name = "lbl_ciudad_cargada";
+            this.lbl_ciudad_cargada.Size = new System.Drawing.Size(41, 13);
+            this.lbl_ciudad_cargada.TabIndex = 26;
+            this.lbl_ciudad_cargada.Text = "label11";
             // 
             // VENTAS
             // 
@@ -482,5 +504,7 @@
         private System.Windows.Forms.Label lbl_apellido_cliente;
         private System.Windows.Forms.Label lbl_apelli_vende;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_ciudad_elegida;
+        private System.Windows.Forms.Label lbl_ciudad_cargada;
     }
 }

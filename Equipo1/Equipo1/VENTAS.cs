@@ -146,12 +146,17 @@ namespace Equipo1
                 MessageBox.Show("Faltan campos");
             }
             string idventa = "";
-            
-            SqlDataAdapter da,daCantidad;
+            string pais = cbo_PAIS.SelectedValue.ToString();
+            SqlDataAdapter da,daCantidad,daciudad;
             DataTable dt = new DataTable();
             DataTable dtCantidad = new DataTable();
-            
-            
+            DataTable dtciudad = new DataTable();
+
+            string consultaciudad = "select c.Ciudad,c.Precio  " +
+                                    "from Paises as p, Ciudades as c " +
+                                    "where p.idPais = c.idPais and p.idPais = @idpais";
+
+
             string consulta = "select cl.Nombre,cl.apellido,ven.Nombre,ven.apellido, p.Pais ,v.Fecha_de_Venta,v.Cantidad_Pasajeros " +
                               "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p " +
                               "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and v.idVentas = @idventa ";
@@ -159,15 +164,20 @@ namespace Equipo1
          
             string consultaCantidad = "select count (idVentas)  as cantidad from Ventas";
 
+            daciudad = new SqlDataAdapter(consultaciudad, cn);
             daCantidad = new SqlDataAdapter(consultaCantidad, cn);
             da = new SqlDataAdapter(consulta, cn);
             cn.Open();
+            daciudad.SelectCommand.Parameters.AddWithValue("@idpais", pais);
+
+            daciudad.Fill(dtciudad);
             
             daCantidad.Fill(dtCantidad);
             
             idventa = dtCantidad.Rows[0][0].ToString();
                                            
             da.SelectCommand.Parameters.AddWithValue("@idventa", idventa);
+            
 
             int preciototal = Convert.ToInt32(txt_cant_PERS.Text) * Convert.ToInt32(lbl_precio.Text);
 
@@ -180,7 +190,24 @@ namespace Equipo1
             lbl_pre.Text = preciototal.ToString();
             lbl_pais.Text = dt.Rows[0][4].ToString();
 
-            
+            if (radioButton1.Checked)
+            {
+                lbl_ciudad_cargada.Text = dtciudad.Rows[0][0].ToString();
+                lbl_precio.Text = dtciudad.Rows[0][1].ToString();
+            }
+            if (radioButton2.Checked)
+            {
+                lbl_ciudad_cargada.Text = dtciudad.Rows[1][0].ToString();
+                lbl_precio.Text = dtciudad.Rows[1][1].ToString();
+            }
+            if (radioButton3.Checked)
+            {
+                lbl_ciudad_cargada.Text = dtciudad.Rows[2][0].ToString();
+                lbl_precio.Text = dtciudad.Rows[2][1].ToString();
+            }
+
+
+
             cn.Close();
 
         }
@@ -239,12 +266,16 @@ namespace Equipo1
                 da.SelectCommand.Parameters.AddWithValue("@idpais", pais);
                 da.Fill(dt);
                 cn.Close();
+
+            
                 if (dt.Rows.Count > 0)
                 {
-                    radioButton1.Text = dt.Rows[0][0].ToString();
-                    radioButton2.Text = dt.Rows[1][0].ToString();
-                    radioButton3.Text = dt.Rows[2][0].ToString();
-                    lbl_precio.Text   = dt.Rows[0][1].ToString();
+                 radioButton1.Text = dt.Rows[0][0].ToString();
+                 radioButton2.Text = dt.Rows[1][0].ToString();
+                 radioButton3.Text = dt.Rows[2][0].ToString();
+                 lbl_precio.Text = dt.Rows[0][1].ToString();
+               
+                    
                 }
                 else
                 {

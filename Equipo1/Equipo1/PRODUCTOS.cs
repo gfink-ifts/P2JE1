@@ -20,19 +20,14 @@ namespace Equipo1
         {
             InitializeComponent();
         }
-
-
-        /*
-         *
-         */
-
+        
 
         private void PRODUCTOS_Load(object sender, EventArgs e)
         {
             cn = new SqlConnection(cadenaConex);
             chk_modificar.Checked = false;
             chk_modificar_CheckedChanged(null, null);
-            dataGridView1.DataSource = CargarDataGrid();
+            dataGridView1.DataSource = InfoDataGrid();
             dataGridView1.Columns[0].Visible = false;
             
         }
@@ -66,6 +61,9 @@ namespace Equipo1
             }
         }
 
+
+        // OPTIMIZAR CON FUNCION DATATABLE dentro de los combos ! ! ! ! ! ! ! ! ! ! ! ! 
+
         private void cbo_Pais_SelectionChangeCommitted(object sender, EventArgs e)
         {
             // Variable para cargar el combo de Ciudades y para la consulta que llena los txt_pais
@@ -85,19 +83,17 @@ namespace Equipo1
 
             PrendeApaga(true, gb_editarCiudad);
             CargaCombos(false, true, pais);
-            BorraTodo("", 0, gb_editarCiudad);
-            cbo_ciudad.Text = "Seleccione Ciudad";
-
-
+            // BorraTodo("", 0, gb_editarCiudad);
+            // cbo_ciudad.Text = "Seleccione Ciudad";
+            // cbo_ciudad.SelectedIndex = 2;
+            cbo_ciudad_SelectionChangeCommitted(null, null);
         }
-
 
         private void cbo_ciudad_SelectionChangeCommitted(object sender, EventArgs e)
         {
             // Variable para la consulta que llena los txt_ciudadNwe y txt_precioCiudad
             string ciudad = cbo_ciudad.SelectedValue.ToString();
 
-            // OPTIMIZAR CON FUNCION DATATABLE acá y arriba ! ! ! ! ! ! ! ! ! ! ! ! 
 
             SqlDataAdapter da;
             DataTable dt = new DataTable();
@@ -111,7 +107,6 @@ namespace Equipo1
             txt_precioCiudad.Text = dt.Rows[0][2].ToString();
             txt_ciudadNew.Text = dt.Rows[0][1].ToString();
         }
-
 
         private void btn_modificaAgrega_Click(object sender, EventArgs e)
         {
@@ -192,7 +187,7 @@ namespace Equipo1
                         cn.Close();
 
                         // Para que se actualice la grilla de productos 
-                        dataGridView1.DataSource = CargarDataGrid();
+                        dataGridView1.DataSource = InfoDataGrid();
                         dataGridView1.Columns[0].Visible = false;
 
                         chk_modificar.Checked = false;
@@ -243,7 +238,7 @@ namespace Equipo1
                         cn.Close();
 
                         // Actualiza la grilla
-                        dataGridView1.DataSource = CargarDataGrid();
+                        dataGridView1.DataSource = InfoDataGrid();
                         dataGridView1.Columns[0].Visible = false;
 
                         chk_modificar.Checked = false;
@@ -260,7 +255,6 @@ namespace Equipo1
 
         }
 
-
         private void btn_salir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -271,12 +265,12 @@ namespace Equipo1
 
 
 
+        /*  ------------------  */
+        /*  Funciones Propias:  */
+        /*  ------------------  */
 
-        // Funciones Propias:
-        // ------------------------------------------
-
-        // Carga DataGridView
-        private DataTable CargarDataGrid()
+        // Para DataGridView
+        private DataTable InfoDataGrid()
         {
             SqlDataAdapter da;
             DataTable dt = new DataTable();
@@ -291,6 +285,7 @@ namespace Equipo1
             
             return dt;
         }
+
 
         // Carga los combos de Paises y Ciudades
         private void CargaCombos(bool pais = true, bool ciudad = false, int idPais = 0)
@@ -327,6 +322,7 @@ namespace Equipo1
             cn.Close();
         }
 
+
         // Borra los textBox y comboBox que están habilitados en el form o dentro de un groupBox
         private void BorraTodo(string palabraTxt, int comBoxValue, GroupBox gb = null)
         {
@@ -359,6 +355,7 @@ namespace Equipo1
                 }
             }
         }
+
 
         // Habilita o deshabilita textBox y comboBox dentro de cada comboBox
         private void PrendeApaga(bool onoff, GroupBox gb = null)
@@ -393,8 +390,9 @@ namespace Equipo1
             }
         }
 
-            // Verifica si los textBox habilitados están vacios, al igual que los comboBox
-            // dentro de los diferentes groupBox
+
+        // Verifica si los textBox habilitados están vacios, al igual que los comboBox
+        // dentro de los diferentes groupBox
         Boolean checkVacios(GroupBox gb)
         {
             Boolean respuesta = true;

@@ -31,7 +31,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gb_Campos = new System.Windows.Forms.GroupBox();
+            this.btn_borraDestino = new System.Windows.Forms.Button();
             this.gb_editarCiudad = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_ciudadNew = new System.Windows.Forms.TextBox();
             this.cbo_ciudad = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_precioCiudad = new System.Windows.Forms.TextBox();
@@ -56,9 +59,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txt_precioCiudad1 = new System.Windows.Forms.TextBox();
             this.btn_salir = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_ciudadNew = new System.Windows.Forms.TextBox();
-            this.btn_borraDestino = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gb_Campos.SuspendLayout();
@@ -102,6 +102,17 @@
             this.gb_Campos.TabStop = false;
             this.gb_Campos.Text = "Edición de Campos :";
             // 
+            // btn_borraDestino
+            // 
+            this.btn_borraDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_borraDestino.Location = new System.Drawing.Point(224, 395);
+            this.btn_borraDestino.Name = "btn_borraDestino";
+            this.btn_borraDestino.Size = new System.Drawing.Size(104, 35);
+            this.btn_borraDestino.TabIndex = 18;
+            this.btn_borraDestino.Text = "Borrar Destino";
+            this.btn_borraDestino.UseVisualStyleBackColor = true;
+            this.btn_borraDestino.Click += new System.EventHandler(this.btn_borraDestino_Click);
+            // 
             // gb_editarCiudad
             // 
             this.gb_editarCiudad.Controls.Add(this.label2);
@@ -116,6 +127,22 @@
             this.gb_editarCiudad.TabIndex = 17;
             this.gb_editarCiudad.TabStop = false;
             this.gb_editarCiudad.Text = "Editar Ciudad";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Nombre :";
+            // 
+            // txt_ciudadNew
+            // 
+            this.txt_ciudadNew.Location = new System.Drawing.Point(70, 90);
+            this.txt_ciudadNew.Name = "txt_ciudadNew";
+            this.txt_ciudadNew.Size = new System.Drawing.Size(110, 20);
+            this.txt_ciudadNew.TabIndex = 15;
             // 
             // cbo_ciudad
             // 
@@ -335,33 +362,6 @@
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Nombre :";
-            // 
-            // txt_ciudadNew
-            // 
-            this.txt_ciudadNew.Location = new System.Drawing.Point(70, 90);
-            this.txt_ciudadNew.Name = "txt_ciudadNew";
-            this.txt_ciudadNew.Size = new System.Drawing.Size(110, 20);
-            this.txt_ciudadNew.TabIndex = 15;
-            // 
-            // btn_borraDestino
-            // 
-            this.btn_borraDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_borraDestino.Location = new System.Drawing.Point(224, 395);
-            this.btn_borraDestino.Name = "btn_borraDestino";
-            this.btn_borraDestino.Size = new System.Drawing.Size(104, 35);
-            this.btn_borraDestino.TabIndex = 18;
-            this.btn_borraDestino.Text = "Borrar Destino";
-            this.btn_borraDestino.UseVisualStyleBackColor = true;
-            this.btn_borraDestino.Click += new System.EventHandler(this.btn_borraDestino_Click);
-            // 
             // PRODUCTOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,12 +391,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox gb_Campos;
         private System.Windows.Forms.Button btn_modificaAgrega;
-        private System.Windows.Forms.ComboBox cbo_ciudad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_pais;
         private System.Windows.Forms.CheckBox chk_modificar;
-        private System.Windows.Forms.ComboBox cbo_Pais;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.TextBox txt_precioCiudad;
         private System.Windows.Forms.Label label5;
@@ -418,5 +416,7 @@
         private System.Windows.Forms.Button btn_borraDestino;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_ciudadNew;
+        private System.Windows.Forms.ComboBox cbo_ciudad;
+        private System.Windows.Forms.ComboBox cbo_Pais;
     }
 }

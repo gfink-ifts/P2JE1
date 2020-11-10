@@ -27,19 +27,16 @@ namespace Equipo1
             cargaDatos("grid");
             chk_borrar.Checked = false;
             chk_borrar_CheckedChanged(null, null);
-
-            lbl_test.Visible = false;
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (chkVacios())
             {
-
                 SqlCommand comando;
 
-                string cadena = "INSERT INTO Vendedores (Nombre, Apellido) " +
-                                    "VALUES (@nomb, @apell)";
+                string cadena = "INSERT INTO Vendedores (Nombre, Apellido) VALUES (@nomb, @apell)";
 
                 string nombre = txt_nombre.Text;
                 string apellodo = txt_apellido.Text;
@@ -74,6 +71,7 @@ namespace Equipo1
             }
         }
 
+
         private void btn_borrar_Click(object sender, EventArgs e)
         {
             int valor = Convert.ToInt16(cbo_vendedor.SelectedValue);
@@ -87,9 +85,6 @@ namespace Equipo1
                 DialogResult r = MessageBox.Show("Se eliminará el vendedor " + Environment.NewLine + Environment.NewLine +
                                     "Desea continuar?", "Baja de Vendedor", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                        
-    //            MessageBox.Show(r.ToString());
-    //            lbl_test.Text = nombreVende;    // System.Data.DataRowView  ???
-
                 if(r == DialogResult.Yes)
                 {
                     SqlCommand comando;
@@ -149,13 +144,19 @@ namespace Equipo1
             }
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
 
-        // Funciones
+
+
+        /*  ------------------  */
+        /*  Funciones Propias:  */
+        /*  ------------------  */
+
         void cargaDatos(string donde)
         {
             SqlDataAdapter da;

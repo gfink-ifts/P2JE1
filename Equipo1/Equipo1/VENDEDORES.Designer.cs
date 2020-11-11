@@ -40,7 +40,6 @@
             this.cbo_vendedor = new System.Windows.Forms.ComboBox();
             this.chk_borrar = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.lbl_test = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Vendedores)).BeginInit();
             this.gb_baja.SuspendLayout();
             this.SuspendLayout();
@@ -152,29 +151,19 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(278, 492);
+            this.button2.Location = new System.Drawing.Point(138, 474);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(109, 34);
             this.button2.TabIndex = 28;
             this.button2.Text = "SALIR";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lbl_test
-            // 
-            this.lbl_test.AutoSize = true;
-            this.lbl_test.Location = new System.Drawing.Point(12, 471);
-            this.lbl_test.Name = "lbl_test";
-            this.lbl_test.Size = new System.Drawing.Size(35, 13);
-            this.lbl_test.TabIndex = 29;
-            this.lbl_test.Text = "label3";
             // 
             // VENDEDORES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 527);
-            this.Controls.Add(this.lbl_test);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.gb_baja);
             this.Controls.Add(this.button1);
@@ -209,6 +198,5 @@
         private System.Windows.Forms.ComboBox cbo_vendedor;
         private System.Windows.Forms.CheckBox chk_borrar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label lbl_test;
     }
 }

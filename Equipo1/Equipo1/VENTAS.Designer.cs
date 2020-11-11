@@ -37,6 +37,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupVentas = new System.Windows.Forms.GroupBox();
             this.groupDESTINO = new System.Windows.Forms.GroupBox();
+            this.lbl_ciudad_elegida = new System.Windows.Forms.Label();
+            this.lbl_precio = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -50,8 +53,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txt_fechaalta = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_precio = new System.Windows.Forms.Label();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.lbl_vendedor = new System.Windows.Forms.Label();
             this.lbl_pais = new System.Windows.Forms.Label();
@@ -63,7 +64,6 @@
             this.lbl_apellido_cliente = new System.Windows.Forms.Label();
             this.lbl_apelli_vende = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_ciudad_elegida = new System.Windows.Forms.Label();
             this.lbl_ciudad_cargada = new System.Windows.Forms.Label();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
@@ -166,6 +166,33 @@
             this.groupDESTINO.TabIndex = 17;
             this.groupDESTINO.TabStop = false;
             this.groupDESTINO.Text = "DESTINO";
+            // 
+            // lbl_ciudad_elegida
+            // 
+            this.lbl_ciudad_elegida.AutoSize = true;
+            this.lbl_ciudad_elegida.Location = new System.Drawing.Point(293, 45);
+            this.lbl_ciudad_elegida.Name = "lbl_ciudad_elegida";
+            this.lbl_ciudad_elegida.Size = new System.Drawing.Size(41, 13);
+            this.lbl_ciudad_elegida.TabIndex = 26;
+            this.lbl_ciudad_elegida.Text = "label11";
+            // 
+            // lbl_precio
+            // 
+            this.lbl_precio.AutoSize = true;
+            this.lbl_precio.Location = new System.Drawing.Point(299, 27);
+            this.lbl_precio.Name = "lbl_precio";
+            this.lbl_precio.Size = new System.Drawing.Size(35, 13);
+            this.lbl_precio.TabIndex = 24;
+            this.lbl_precio.Text = "label7";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(252, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "PRECIO";
             // 
             // radioButton3
             // 
@@ -291,50 +318,32 @@
             this.txt_fechaalta.Size = new System.Drawing.Size(84, 20);
             this.txt_fechaalta.TabIndex = 15;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(252, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "PRECIO";
-            // 
-            // lbl_precio
-            // 
-            this.lbl_precio.AutoSize = true;
-            this.lbl_precio.Location = new System.Drawing.Point(299, 27);
-            this.lbl_precio.Name = "lbl_precio";
-            this.lbl_precio.Size = new System.Drawing.Size(35, 13);
-            this.lbl_precio.TabIndex = 24;
-            this.lbl_precio.Text = "label7";
-            // 
             // lbl_cliente
             // 
             this.lbl_cliente.AutoSize = true;
             this.lbl_cliente.Location = new System.Drawing.Point(70, 10);
             this.lbl_cliente.Name = "lbl_cliente";
-            this.lbl_cliente.Size = new System.Drawing.Size(35, 13);
+            this.lbl_cliente.Size = new System.Drawing.Size(10, 13);
             this.lbl_cliente.TabIndex = 16;
-            this.lbl_cliente.Text = "label7";
+            this.lbl_cliente.Text = "-";
             // 
             // lbl_vendedor
             // 
             this.lbl_vendedor.AutoSize = true;
             this.lbl_vendedor.Location = new System.Drawing.Point(273, 10);
             this.lbl_vendedor.Name = "lbl_vendedor";
-            this.lbl_vendedor.Size = new System.Drawing.Size(35, 13);
+            this.lbl_vendedor.Size = new System.Drawing.Size(10, 13);
             this.lbl_vendedor.TabIndex = 17;
-            this.lbl_vendedor.Text = "label8";
+            this.lbl_vendedor.Text = "-";
             // 
             // lbl_pais
             // 
             this.lbl_pais.AutoSize = true;
             this.lbl_pais.Location = new System.Drawing.Point(467, 10);
             this.lbl_pais.Name = "lbl_pais";
-            this.lbl_pais.Size = new System.Drawing.Size(35, 13);
+            this.lbl_pais.Size = new System.Drawing.Size(10, 13);
             this.lbl_pais.TabIndex = 18;
-            this.lbl_pais.Text = "label9";
+            this.lbl_pais.Text = "-";
             // 
             // lbl_pre
             // 
@@ -386,18 +395,18 @@
             this.lbl_apellido_cliente.AutoSize = true;
             this.lbl_apellido_cliente.Location = new System.Drawing.Point(111, 10);
             this.lbl_apellido_cliente.Name = "lbl_apellido_cliente";
-            this.lbl_apellido_cliente.Size = new System.Drawing.Size(41, 13);
+            this.lbl_apellido_cliente.Size = new System.Drawing.Size(10, 13);
             this.lbl_apellido_cliente.TabIndex = 24;
-            this.lbl_apellido_cliente.Text = "label11";
+            this.lbl_apellido_cliente.Text = "-";
             // 
             // lbl_apelli_vende
             // 
             this.lbl_apelli_vende.AutoSize = true;
             this.lbl_apelli_vende.Location = new System.Drawing.Point(323, 10);
             this.lbl_apelli_vende.Name = "lbl_apelli_vende";
-            this.lbl_apelli_vende.Size = new System.Drawing.Size(41, 13);
+            this.lbl_apelli_vende.Size = new System.Drawing.Size(10, 13);
             this.lbl_apelli_vende.TabIndex = 25;
-            this.lbl_apelli_vende.Text = "label11";
+            this.lbl_apelli_vende.Text = "-";
             // 
             // groupBox1
             // 
@@ -418,15 +427,6 @@
             this.groupBox1.Size = new System.Drawing.Size(750, 40);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            // 
-            // lbl_ciudad_elegida
-            // 
-            this.lbl_ciudad_elegida.AutoSize = true;
-            this.lbl_ciudad_elegida.Location = new System.Drawing.Point(293, 45);
-            this.lbl_ciudad_elegida.Name = "lbl_ciudad_elegida";
-            this.lbl_ciudad_elegida.Size = new System.Drawing.Size(41, 13);
-            this.lbl_ciudad_elegida.TabIndex = 26;
-            this.lbl_ciudad_elegida.Text = "label11";
             // 
             // lbl_ciudad_cargada
             // 

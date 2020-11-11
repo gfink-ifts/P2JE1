@@ -49,6 +49,7 @@ namespace Equipo1
         {
             if (chk_modificar.Checked)
             {
+                cargarcombo();
                 string cliente = cbo_clientes.SelectedValue.ToString();
                                                                       
                 SqlDataAdapter da;
@@ -146,6 +147,7 @@ namespace Equipo1
 
                 if (chk_modificar.Checked)
                 {
+                    
                     consulta = quarryupdate;
                     cliente = cbo_clientes.SelectedValue.ToString();
                     mensaje = mensajeupdate;

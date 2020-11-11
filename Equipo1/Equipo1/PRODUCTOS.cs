@@ -115,7 +115,8 @@ namespace Equipo1
                 // Variables con las instrucciones para la base de datos:
                 string instruccion = "";
                 string instrucModifica = "UPDATE Paises SET Pais = @pais where idPais = @idPais " +
-                                            "UPDATE Ciudades SET Precio = @precioCiudad where idCiudad = @idCiudad";
+                                            "UPDATE Ciudades SET Precio = @precioCiudad where idCiudad = @idCiudad " +
+                                            "UPDATE Ciudades SET Ciudad = @Ciudad where idCiudad = @idCiudad ";
 
                 string instrucNuevo = "INSERT INTO Paises (Pais) VALUES (@pais) " +
                                         "INSERT INTO Ciudades(Ciudad, Precio, idPais) VALUES(@ciudad1, @precioCiudad1, (SELECT MAX(idPais) FROM Paises)) " +
@@ -139,6 +140,7 @@ namespace Equipo1
                     string idPais = cbo_Pais.SelectedValue.ToString();      // @idPais
                     string idCiudad = cbo_ciudad.SelectedValue.ToString();  // @idCiudad
                     string precioCiudad = txt_precioCiudad.Text;            // @precioCiudad
+                    string nombreCiudad = txt_ciudadNew.Text;
 
                     instruccion = instrucModifica;
                     mensaje = mensajeModficado;
@@ -146,6 +148,7 @@ namespace Equipo1
                     comando.Parameters.AddWithValue("@idPais", idPais);
                     comando.Parameters.AddWithValue("@idCiudad", idCiudad);
                     comando.Parameters.AddWithValue("@precioCiudad", precioCiudad);
+                    comando.Parameters.AddWithValue("@Ciudad", nombreCiudad);
 
                 }
                 else

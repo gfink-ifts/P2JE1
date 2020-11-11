@@ -26,30 +26,30 @@ namespace Equipo1
             cn = new SqlConnection(cadenaConex);
             cbo_clientes.Enabled = false;
             cargarcombo();
+            dataGrid_Cliente.DataSource = gridClientes();   // Llena el datagrid mostrando todo lo de Clientes
         }
 
         private void chk_modificar_CheckedChanged(object sender, EventArgs e)
         {
             if (chk_modificar.Checked)
             {
-                cbo_clientes_SelectionChangeCommitted(null, null);
                 btn_agregar.Text = "MODIFICAR";
+                cargarcombo();  // Recarga el combo siempre antes de habilitarlo
                 cbo_clientes.Enabled = true;
-                vaciarTextboxes();
             }
             else
             {
                 btn_agregar.Text = "NUEVO CLIENTE";
                 cbo_clientes.Enabled = false;
-                vaciarTextboxes();
             }
+            vaciarTextboxes(); // Sale del if para borrar siempre - No importa si está tildado o no el Checkbox
         }
 
         private void cbo_clientes_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (chk_modificar.Checked)
             {
-                cargarcombo();
+                string formato = "yyyy-MM-dd";  // Para respetar el formato de fecha en el txt_fecha (1)
                 string cliente = cbo_clientes.SelectedValue.ToString();
                                                                       
                 SqlDataAdapter da;
@@ -60,13 +60,19 @@ namespace Equipo1
                 da.SelectCommand.Parameters.AddWithValue("@cliente", cliente);
                 da.Fill(dt);
                 cn.Close();
+
+                // Soluciona problema de fecha en el txt al tomar el cliente del combo para modificar (2)
+                DateTime dia = Convert.ToDateTime(dt.Rows[0][5]);   
+
                 if (dt.Rows.Count > 0)
                 {
                     txt_nombre.Text = dt.Rows[0][1].ToString();
                     txt_apellido.Text = dt.Rows[0][2].ToString();
                     txt_direccion.Text = dt.Rows[0][3].ToString();
                     txt_ciudad.Text = dt.Rows[0][4].ToString();
-                    txt_fecha.Text = dt.Rows[0][5].ToString();
+
+                    // se cambia esto "dt.Rows[0][5].ToString();" para solucionar formato de fecha (junto con la linea de arriba) (3)
+                    txt_fecha.Text = dia.ToString(formato);
                 }
                 else
                 {
@@ -77,6 +83,7 @@ namespace Equipo1
             }
 
         }
+
         void cargarcombo()
         {
             SqlDataAdapter da;
@@ -206,5 +213,21 @@ namespace Equipo1
                 }
             }
         }
+
+        // Funciona para cargar el DataGrid
+        private DataTable gridClientes()
+        {
+            SqlDataAdapter da;
+            DataTable dt = new DataTable();
+            string consulta = "SELECT * FROM Clientes"; // ORDER BY Apellido"; // - Opcional -
+
+            da = new SqlDataAdapter(consulta, cn);
+            cn.Open();
+            da.Fill(dt);
+            cn.Close();
+
+            return dt;
+        }
+
     }
 }

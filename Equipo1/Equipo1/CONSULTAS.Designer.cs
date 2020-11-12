@@ -46,8 +46,12 @@
             this.cbo_vendedor = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gb_destinos = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridDestinos = new System.Windows.Forms.DataGridView();
             this.gb_destinosResul = new System.Windows.Forms.GroupBox();
+            this.lbl_paisAcumulado = new System.Windows.Forms.Label();
+            this.lbl_ciudadBatara = new System.Windows.Forms.Label();
             this.lbl_paisMejorNombre = new System.Windows.Forms.Label();
             this.lbl_ciudadCara = new System.Windows.Forms.Label();
             this.lbl_paisMejorMonto = new System.Windows.Forms.Label();
@@ -59,10 +63,6 @@
             this.rdb_todasCiudades = new System.Windows.Forms.RadioButton();
             this.rdb_unPais = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbl_ciudadBatara = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbl_paisAcumulado = new System.Windows.Forms.Label();
             this.gb_Vendedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Vendedores)).BeginInit();
             this.gb_vendedoresResul.SuspendLayout();
@@ -200,7 +200,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Mejor Vendedor :";
+            this.label1.Text = "Mejor Venta por :";
             // 
             // rdb_unVendedor
             // 
@@ -262,6 +262,24 @@
             this.gb_destinos.TabStop = false;
             this.gb_destinos.Text = "Destinos :";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(167, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Venta Acumulada :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(140, 367);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Ciudad más Económica :";
+            // 
             // dataGridDestinos
             // 
             this.dataGridDestinos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -284,6 +302,24 @@
             this.gb_destinosResul.Size = new System.Drawing.Size(113, 197);
             this.gb_destinosResul.TabIndex = 11;
             this.gb_destinosResul.TabStop = false;
+            // 
+            // lbl_paisAcumulado
+            // 
+            this.lbl_paisAcumulado.AutoSize = true;
+            this.lbl_paisAcumulado.Location = new System.Drawing.Point(6, 91);
+            this.lbl_paisAcumulado.Name = "lbl_paisAcumulado";
+            this.lbl_paisAcumulado.Size = new System.Drawing.Size(69, 13);
+            this.lbl_paisAcumulado.TabIndex = 12;
+            this.lbl_paisAcumulado.Text = "Acumulado $";
+            // 
+            // lbl_ciudadBatara
+            // 
+            this.lbl_ciudadBatara.AutoSize = true;
+            this.lbl_ciudadBatara.Location = new System.Drawing.Point(6, 161);
+            this.lbl_ciudadBatara.Name = "lbl_ciudadBatara";
+            this.lbl_ciudadBatara.Size = new System.Drawing.Size(74, 13);
+            this.lbl_ciudadBatara.TabIndex = 11;
+            this.lbl_ciudadBatara.Text = "Ciudad Barata";
             // 
             // lbl_paisMejorNombre
             // 
@@ -324,11 +360,11 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(167, 227);
+            this.label14.Location = new System.Drawing.Point(148, 227);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 13);
+            this.label14.Size = new System.Drawing.Size(116, 13);
             this.label14.TabIndex = 5;
-            this.label14.Text = "Pais más Vendido :";
+            this.label14.Text = "Pais con Venta mayor :";
             // 
             // label15
             // 
@@ -393,42 +429,6 @@
             this.button1.Text = "Cerrar\r\nConsultas";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(140, 367);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Ciudad más Económica :";
-            // 
-            // lbl_ciudadBatara
-            // 
-            this.lbl_ciudadBatara.AutoSize = true;
-            this.lbl_ciudadBatara.Location = new System.Drawing.Point(6, 161);
-            this.lbl_ciudadBatara.Name = "lbl_ciudadBatara";
-            this.lbl_ciudadBatara.Size = new System.Drawing.Size(74, 13);
-            this.lbl_ciudadBatara.TabIndex = 11;
-            this.lbl_ciudadBatara.Text = "Ciudad Barata";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(167, 297);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Venta Acumulada :";
-            // 
-            // lbl_paisAcumulado
-            // 
-            this.lbl_paisAcumulado.AutoSize = true;
-            this.lbl_paisAcumulado.Location = new System.Drawing.Point(6, 91);
-            this.lbl_paisAcumulado.Name = "lbl_paisAcumulado";
-            this.lbl_paisAcumulado.Size = new System.Drawing.Size(69, 13);
-            this.lbl_paisAcumulado.TabIndex = 12;
-            this.lbl_paisAcumulado.Text = "Acumulado $";
             // 
             // CONSULTAS
             // 

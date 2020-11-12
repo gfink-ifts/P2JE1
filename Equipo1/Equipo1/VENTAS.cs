@@ -92,7 +92,7 @@ namespace Equipo1
                 int calculo = Convert.ToInt16(lbl_precio.Text) * Convert.ToInt16(txt_cant_PERS.Text);
                 string fecha;
 
-                // Se agrega @Gasto_Total y @idCiudad a la instrucción por modificación en la Base de Datos + Variables correspondientes
+
                 string instruccion = "INSERT INTO Ventas(Fecha_de_Venta, idVendedor, idPais, idCliente, Cantidad_Pasajeros, Gasto_Total, idCiudad) " +
                                     "VALUES(@fecha, @idvendedor, @idpais, @idcliente, @Cantidad_Pasajeros, @Gasto_total, @idCiudad) ";
 
@@ -102,8 +102,8 @@ namespace Equipo1
                 string idpais = "";
                 string idTcliente = "";
                 string cantidadpasajeros = txt_cant_PERS.Text;
-                string gastototal = calculo.ToString();     // Var 1
-                string idciudad = "";       // Var 2
+                string gastototal = calculo.ToString();
+                string idciudad = "";
                 
 
                 SqlCommand comando;
@@ -143,84 +143,19 @@ namespace Equipo1
                     MessageBox.Show(ex.Message);
                     cn.Close();
                 }
+
+                lbl_cliente.Text = cbo_Clientes.Text;
+                lbl_vendedor.Text = cbo_VENDEDOR.Text;
+                lbl_pais.Text = cbo_PAIS.Text;
+                lbl_pre.Text = gastototal;
+                lbl_ciudad.Text = cbo_CIUDADES.Text;
             }
             else
             {
                 MessageBox.Show("Faltan campos");
             }
 
-            //  VER DE ACA EN ADELANTE  !  !  !  !  !
-            /*
-            string idventa = "";
-            string pais = cbo_PAIS.SelectedValue.ToString();
-            SqlDataAdapter da,daCantidad,daciudad;
-            DataTable dt = new DataTable();
-            DataTable dtCantidad = new DataTable();
-            DataTable dtciudad = new DataTable();
-
-            string consultaciudad = "select c.Ciudad,c.Precio  " +
-                                    "from Paises as p, Ciudades as c " +
-                                    "where p.idPais = c.idPais and p.idPais = @idpais";
-
-
-            string consulta = "select cl.Nombre,cl.apellido,ven.Nombre,ven.apellido, p.Pais ,v.Fecha_de_Venta,v.Cantidad_Pasajeros " +
-                              "from Ventas as v,Vendedores as ven, Clientes as cl, Paises as p " +
-                              "where cl.idCliente = v.idCliente and ven.idVendedor = v.idVendedor and v.idPais = p.idPais and v.idVentas = @idventa ";
-
-         
-            string consultaCantidad = "select count (idVentas)  as cantidad from Ventas";
-
-            daciudad = new SqlDataAdapter(consultaciudad, cn);
-            daCantidad = new SqlDataAdapter(consultaCantidad, cn);
-            da = new SqlDataAdapter(consulta, cn);
-            cn.Open();
-            daciudad.SelectCommand.Parameters.AddWithValue("@idpais", pais);
-
-            daciudad.Fill(dtciudad);
-            
-            daCantidad.Fill(dtCantidad);
-            
-            idventa = dtCantidad.Rows[0][0].ToString();
-                                           
-            da.SelectCommand.Parameters.AddWithValue("@idventa", idventa);
-            
-
-            int preciototal = Convert.ToInt32(txt_cant_PERS.Text) * Convert.ToInt32(lbl_precio.Text);
-
-            da.Fill(dt);
-            cn.Close();
-            */
-            //  HASTA ACA   !  !  !  !  !
-
-
-            lbl_cliente.Text = cbo_Clientes.Text;   // dt.Rows[0][0].ToString();
-            // lbl_apellido_cliente.Text = dt.Rows[0][1].ToString();
-            lbl_vendedor.Text = cbo_VENDEDOR.Text;  // dt.Rows[0][2].ToString();
-            // lbl_apelli_vende.Text = dt.Rows[0][3].ToString();
-            lbl_pais.Text = cbo_PAIS.Text;          // dt.Rows[0][4].ToString();
-            lbl_pre.Text = lbl_precio.Text;
-            lbl_ciudad.Text = cbo_CIUDADES.Text;
-
-            ReiniciaCombo();    // Reinicia combos txt y lbl
-
-            // ESTO SE VA X LOS RADIOS --- AHORA HAY Un COMBO
-            //if (radioButton1.Checked)
-            //{
-            //    lbl_ciudad_cargada.Text = dtciudad.Rows[0][0].ToString();
-            //    lbl_precio.Text = dtciudad.Rows[0][1].ToString();
-            //}
-            //if (radioButton2.Checked)
-            //{
-            //    lbl_ciudad_cargada.Text = dtciudad.Rows[1][0].ToString();
-            //    lbl_precio.Text = dtciudad.Rows[1][1].ToString();
-            //}
-            //if (radioButton3.Checked)
-            //{
-            //    lbl_ciudad_cargada.Text = dtciudad.Rows[2][0].ToString();
-            //    lbl_precio.Text = dtciudad.Rows[2][1].ToString();
-            //}
-
-
+            ReiniciaCombo();
         }
 
         Boolean checkVacios()
@@ -305,10 +240,9 @@ namespace Equipo1
         private void btn_Ver_Ventas_Click(object sender, EventArgs e)
         {
             string seleccion = "";
-            // string orden = "",query="";
+            
             seleccion = cbo_orden.SelectedItem.ToString();
 
-            // Nueva consulta...
             string query = "SELECT v.idVentas, v.Fecha_de_Venta, (cl.Nombre + ' ' + cl.Apellido) AS Cliente, " +
                 "v.Cantidad_Pasajeros AS Pasajeros, (ven.Nombre + ' ' + ven.Apellido) as Vendedor, " +
                 "p.Pais, c.Ciudad, c.Precio as Precio_Ciudad, v.Gasto_Total " +

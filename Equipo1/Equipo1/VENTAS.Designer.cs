@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupVentas = new System.Windows.Forms.GroupBox();
             this.groupDESTINO = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbo_CIUDADES = new System.Windows.Forms.ComboBox();
             this.lbl_precio = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_cant_PERS = new System.Windows.Forms.TextBox();
@@ -60,8 +62,6 @@
             this.lbl_tituloCiudad = new System.Windows.Forms.Label();
             this.lbl_ciudad = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cbo_CIUDADES = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupVentas.SuspendLayout();
             this.groupDESTINO.SuspendLayout();
@@ -164,6 +164,24 @@
             this.groupDESTINO.TabIndex = 17;
             this.groupDESTINO.TabStop = false;
             this.groupDESTINO.Text = "DESTINO";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(219, 21);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "CIUDADES";
+            // 
+            // cbo_CIUDADES
+            // 
+            this.cbo_CIUDADES.FormattingEnabled = true;
+            this.cbo_CIUDADES.Location = new System.Drawing.Point(189, 37);
+            this.cbo_CIUDADES.Name = "cbo_CIUDADES";
+            this.cbo_CIUDADES.Size = new System.Drawing.Size(123, 21);
+            this.cbo_CIUDADES.TabIndex = 25;
+            this.cbo_CIUDADES.SelectionChangeCommitted += new System.EventHandler(this.cbo_CIUDADES_SelectionChangeCommitted);
             // 
             // lbl_precio
             // 
@@ -288,7 +306,7 @@
             // lbl_vendedor
             // 
             this.lbl_vendedor.AutoSize = true;
-            this.lbl_vendedor.Location = new System.Drawing.Point(257, 14);
+            this.lbl_vendedor.Location = new System.Drawing.Point(262, 14);
             this.lbl_vendedor.Name = "lbl_vendedor";
             this.lbl_vendedor.Size = new System.Drawing.Size(10, 13);
             this.lbl_vendedor.TabIndex = 17;
@@ -297,7 +315,7 @@
             // lbl_pais
             // 
             this.lbl_pais.AutoSize = true;
-            this.lbl_pais.Location = new System.Drawing.Point(393, 14);
+            this.lbl_pais.Location = new System.Drawing.Point(417, 14);
             this.lbl_pais.Name = "lbl_pais";
             this.lbl_pais.Size = new System.Drawing.Size(10, 13);
             this.lbl_pais.TabIndex = 18;
@@ -306,11 +324,11 @@
             // lbl_pre
             // 
             this.lbl_pre.AutoSize = true;
-            this.lbl_pre.Location = new System.Drawing.Point(776, 16);
+            this.lbl_pre.Location = new System.Drawing.Point(792, 16);
             this.lbl_pre.Name = "lbl_pre";
-            this.lbl_pre.Size = new System.Drawing.Size(41, 13);
+            this.lbl_pre.Size = new System.Drawing.Size(10, 13);
             this.lbl_pre.TabIndex = 19;
-            this.lbl_pre.Text = "label10";
+            this.lbl_pre.Text = "-";
             // 
             // label7
             // 
@@ -324,7 +342,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(177, 14);
+            this.label8.Location = new System.Drawing.Point(182, 14);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 21;
@@ -333,7 +351,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(356, 14);
+            this.label9.Location = new System.Drawing.Point(380, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 22;
@@ -342,7 +360,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(685, 16);
+            this.label10.Location = new System.Drawing.Point(701, 16);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 13);
             this.label10.TabIndex = 23;
@@ -351,7 +369,7 @@
             // lbl_tituloCiudad
             // 
             this.lbl_tituloCiudad.AutoSize = true;
-            this.lbl_tituloCiudad.Location = new System.Drawing.Point(501, 14);
+            this.lbl_tituloCiudad.Location = new System.Drawing.Point(515, 14);
             this.lbl_tituloCiudad.Name = "lbl_tituloCiudad";
             this.lbl_tituloCiudad.Size = new System.Drawing.Size(51, 13);
             this.lbl_tituloCiudad.TabIndex = 24;
@@ -360,7 +378,7 @@
             // lbl_ciudad
             // 
             this.lbl_ciudad.AutoSize = true;
-            this.lbl_ciudad.Location = new System.Drawing.Point(558, 14);
+            this.lbl_ciudad.Location = new System.Drawing.Point(572, 14);
             this.lbl_ciudad.Name = "lbl_ciudad";
             this.lbl_ciudad.Size = new System.Drawing.Size(10, 13);
             this.lbl_ciudad.TabIndex = 25;
@@ -384,24 +402,6 @@
             this.groupBox1.Size = new System.Drawing.Size(866, 40);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(219, 21);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 13);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "CIUDADES";
-            // 
-            // cbo_CIUDADES
-            // 
-            this.cbo_CIUDADES.FormattingEnabled = true;
-            this.cbo_CIUDADES.Location = new System.Drawing.Point(189, 37);
-            this.cbo_CIUDADES.Name = "cbo_CIUDADES";
-            this.cbo_CIUDADES.Size = new System.Drawing.Size(123, 21);
-            this.cbo_CIUDADES.TabIndex = 25;
-            this.cbo_CIUDADES.SelectionChangeCommitted += new System.EventHandler(this.cbo_CIUDADES_SelectionChangeCommitted);
             // 
             // label12
             // 

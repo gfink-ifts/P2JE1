@@ -26,7 +26,7 @@ namespace Equipo1
             cn = new SqlConnection(cadenaConex);
             cbo_clientes.Enabled = false;
             cargarcombo();
-            dataGrid_Cliente.DataSource = gridClientes();   // Llena el datagrid mostrando todo lo de Clientes
+            dataGrid_Cliente.DataSource = gridClientes();
         }
 
         private void chk_modificar_CheckedChanged(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Equipo1
             if (chk_modificar.Checked)
             {
                 btn_agregar.Text = "MODIFICAR";
-                cargarcombo();  // Recarga el combo siempre antes de habilitarlo
+                cargarcombo(); 
                 cbo_clientes.Enabled = true;
             }
             else
@@ -42,7 +42,7 @@ namespace Equipo1
                 btn_agregar.Text = "NUEVO CLIENTE";
                 cbo_clientes.Enabled = false;
             }
-            vaciarTextboxes(); // Sale del if para borrar siempre - No importa si está tildado o no el Checkbox
+            vaciarTextboxes();
         }
 
         private void cbo_clientes_SelectionChangeCommitted(object sender, EventArgs e)

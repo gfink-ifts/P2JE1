@@ -195,6 +195,8 @@ namespace Equipo1
                     MessageBox.Show(ex.Message);
                     cn.Close();
                 }
+                vaciarTextboxes(); // Borrar siempre los txt
+                dataGrid_Cliente.DataSource = gridClientes();   // Actualiza el DataGrid
 
             }
             else

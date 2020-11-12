@@ -168,6 +168,7 @@
             this.txt_precioCiudad.Name = "txt_precioCiudad";
             this.txt_precioCiudad.Size = new System.Drawing.Size(49, 20);
             this.txt_precioCiudad.TabIndex = 14;
+            this.txt_precioCiudad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precioCiudad_KeyPress);
             // 
             // label5
             // 
@@ -261,6 +262,7 @@
             this.txt_precioCiudad3.Name = "txt_precioCiudad3";
             this.txt_precioCiudad3.Size = new System.Drawing.Size(49, 20);
             this.txt_precioCiudad3.TabIndex = 11;
+            this.txt_precioCiudad3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precioCiudad_KeyPress);
             // 
             // txt_ciudad3
             // 
@@ -309,6 +311,7 @@
             this.txt_precioCiudad2.Name = "txt_precioCiudad2";
             this.txt_precioCiudad2.Size = new System.Drawing.Size(49, 20);
             this.txt_precioCiudad2.TabIndex = 9;
+            this.txt_precioCiudad2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precioCiudad_KeyPress);
             // 
             // txt_ciudad1
             // 
@@ -350,6 +353,7 @@
             this.txt_precioCiudad1.Name = "txt_precioCiudad1";
             this.txt_precioCiudad1.Size = new System.Drawing.Size(49, 20);
             this.txt_precioCiudad1.TabIndex = 7;
+            this.txt_precioCiudad1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_precioCiudad_KeyPress);
             // 
             // btn_salir
             // 

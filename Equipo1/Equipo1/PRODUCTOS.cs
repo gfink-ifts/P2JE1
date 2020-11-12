@@ -419,6 +419,22 @@ namespace Equipo1
             return respuesta;
         }
 
-      
+        private void txt_precioCiudad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+                if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }            
+        }
     }
 }

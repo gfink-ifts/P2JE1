@@ -208,6 +208,7 @@
             this.txt_cant_PERS.Size = new System.Drawing.Size(63, 20);
             this.txt_cant_PERS.TabIndex = 10;
             this.txt_cant_PERS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_cant_PERS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_cant_PERS_KeyPress);
             // 
             // label4
             // 
